@@ -39,8 +39,22 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources',
     'nuxt-webfontloader'
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Sawarabi+Gothic']
+    }
+  },
+
+  styleResources: {
+    scss: [
+     '~/assets/scss/style.scss'
+     ]
+   },
+
   /*
   ** Build configuration
   */

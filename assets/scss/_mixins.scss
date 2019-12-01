@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+@mixin media($media) {
+  @if not map-has-key($media-types, $media) {
+    @warn "#{$media}は登録されていないブレークポイントです。代わりにデスクトップ用のポイントを設定します";
+    $media: default;
+  }
+  @media #{map-get($media-types, $media)} {
+    @content;
+  }
+}
+
+@mixin gallery($w:100%, $g:0){
+  margin-left: -($g);
+  margin-right: -($g);
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *{
+    box-sizing: border-box;
+    width: $w;
+    padding-left: $g;
+    padding-right: $g;
+  }
+}
+
+@mixin clearfix{
+  *zoom: 1;
+  &:before,&:after {
+    content: "";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+@mixin marker{
+  display: inline-block;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    display: block;
+    left: -10px;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    background-color: #FFCC33;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .marker{
+    position: relative;
+  }
+}
+
+@mixin icon-image($src){
+    background: url(#{$src}) left top no-repeat;
+    content: "";
+    display: inline-block;
+    background-size: contain;
+}
+
+@mixin icon-size($src, $w, $h, $ratio:1){
+    width: ($w / $ratio);
+    height: ($h / $ratio);
+}
+
+@mixin icon($src, $w, $h, $ratio:1){
+    @include icon-image($src);
+    @include icon-size($src, $w, $h, $ratio);
+}
+
+@mixin gallery($w:100%, $g:0){
+  margin-left: -($g);
+  margin-right: -($g);
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *{
+    box-sizing: border-box;
+    width: $w;
+    padding-left: $g;
+    padding-right: $g;
+  }
+}

@@ -8,7 +8,12 @@
           h2.title.info-title スズスポグリル
         dl.dl-info
           dt 対応車種：
-          dt スズキ ジムニー（●●年）
+          dt
+            ul
+              li スズキ ジムニー（●●年）
+              li スズキ ジムニー（●●年）
+              li スズキ ジムニー（●●年）
+              li スズキ ジムニー（●●年）
         span.price 33,800
           span.price-unit 円（税別）
         .info__footer
@@ -28,12 +33,16 @@
   width: 500px;
   @include media(md-lg){
     margin-right: 20px;
+    img{
+      max-width: none;
+      width: 500px;
+    }
   }
 }
 
 .info__header{
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   margin-bottom: 20px;
   &:before{
     content: "";
@@ -62,7 +71,7 @@
 }
 
 .info-title{
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -71,6 +80,15 @@
   font-size: 40px;
   &-unit{
     font-size: 0.5em;
+  }
+}
+
+.dl-info{
+  ul{
+    li{
+      display: inline-block;
+      margin-right: 1em;
+    }
   }
 }
 

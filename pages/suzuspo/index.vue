@@ -8,16 +8,27 @@
         .hero_photo
           .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg")
       LpInfo
+      .gallery
+      LpHowto
+      LpMedia
+      LpForm
+
     footer#footer
       p: small Copyright © Auto Ruby's All Rights Reserved.
 </template>
 
 <script>
 import LpInfo from '~/components/LpInfo.vue'
+import LpHowto from '~/components/LpHowto.vue'
+import LpMedia from '~/components/LpMedia.vue'
+import LpForm from '~/components/LpForm.vue'
 
 export default {
   components: {
-    LpInfo
+    LpInfo,
+    LpHowto,
+    LpMedia,
+    LpForm,
   }
 }
 </script>
@@ -69,8 +80,8 @@ export default {
   color: #FFF;
   background-color: #122A88;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   small{
     font-size: 13px;
   }

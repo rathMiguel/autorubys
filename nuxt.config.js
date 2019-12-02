@@ -23,7 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
-    'reset.css'
+    'reset.css',
+    '~/assets/scss/style.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -45,7 +46,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Sawarabi+Gothic']
+      families: ['M+PLUS+Rounded+1c:400,700&display=swap']
     }
   },
 

@@ -17,7 +17,7 @@
         span.price 33,800
           span.price-unit 円（税別）
         .info__footer
-          a(href="#form").c-button.button-info お問い合わせ・ご注文
+          nuxt-link(v-scroll-to="'#form'" to).c-button.button-info お問い合わせ・ご注文
 </template>
 
 <style lang="scss" scoped>

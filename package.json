@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
+    "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
     "nuxt-webfontloader": "^1.1.0",
     "reset.css": "^2.0.2",

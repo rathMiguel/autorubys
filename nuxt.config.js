@@ -24,12 +24,15 @@ export default {
   */
   css: [
     'reset.css',
+    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/slick-carousel/slick/slick-theme.css',
     '~/assets/scss/style.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/vue-scrollto'
   ],
   /*
   ** Nuxt.js dev-modules

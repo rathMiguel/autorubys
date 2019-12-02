@@ -8,11 +8,11 @@
         .hero_photo
           .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg")
       LpInfo
-      .gallery
+      LpGallery
+      LpColors
       LpHowto
       LpMedia
       LpForm
-
     footer#footer
       p: small Copyright © Auto Ruby's All Rights Reserved.
 </template>
@@ -22,6 +22,8 @@ import LpInfo from '~/components/LpInfo.vue'
 import LpHowto from '~/components/LpHowto.vue'
 import LpMedia from '~/components/LpMedia.vue'
 import LpForm from '~/components/LpForm.vue'
+import LpGallery from '~/components/LpGallery.vue'
+import LpColors from '~/components/LpColors.vue'
 
 export default {
   components: {
@@ -29,6 +31,8 @@ export default {
     LpHowto,
     LpMedia,
     LpForm,
+    LpGallery,
+    LpColors,
   }
 }
 </script>

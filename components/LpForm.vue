@@ -1,32 +1,33 @@
 <template lang="pug">
 .contact#form
   .container
-    .form-header
-      h2.title.title-bar__contact お問い合わせ・ご注文はこちらから
-    .form-contain
-      dl.dl-form
-        dt お問い合わせ種類
-        dd
-          select(name="").input-medium
-            option(value="") 選択してください
-            option(value="商品について") 商品について
-            option(value="購入について") 購入について
-            option(value="カスタマイズのご依頼") カスタマイズのご依頼
-            option(value="取付のご依頼") 取付のご依頼
-      dl.dl-form
-        dt お名前
-        dd
-          input(type="text" name="お名前" placeholder="例）山田　太郎").input-medium
-      dl.dl-form
-        dt メールアドレス
-        dd
-          input(type="email" name="email" placeholder="例）info@autorubys.com").input-medium
-      dl.dl-form
-        dt お問い合わせ内容・備考
-        dd
-          textarea(name="お問い合わせ内容・備考").input-full
-      .form-footer
-        button(type="submit").c-button.button-submit 送信する
+    form(method="post" action="")
+      .form-header
+        h2.title.title-bar__contact お問い合わせ・ご注文はこちらから
+      .form-contain
+        dl.dl-form
+          dt お問い合わせ種類
+          dd
+            select(name="").input-medium
+              option(value="") 選択してください
+              option(value="商品について") 商品について
+              option(value="購入について") 購入について
+              option(value="カスタマイズのご依頼") カスタマイズのご依頼
+              option(value="取付のご依頼") 取付のご依頼
+        dl.dl-form
+          dt お名前
+          dd
+            input(type="text" name="お名前" placeholder="例）山田　太郎").input-medium
+        dl.dl-form
+          dt メールアドレス
+          dd
+            input(type="email" name="email" placeholder="例）info@autorubys.com").input-medium
+        dl.dl-form
+          dt お問い合わせ内容・備考
+          dd
+            textarea(name="お問い合わせ内容・備考").input-full
+        .form-footer
+          button(type="submit").c-button.button-submit 送信する
   .container
     .form-outro
       p こちらからも購入できます

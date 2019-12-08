@@ -1,5 +1,5 @@
 <template lang="pug">
-.howto.section
+.howto.section#howto
   .section-header
     h2.title.section-title 取付方法
     span.section-title__en How to Install

@@ -2,7 +2,7 @@
 .info
   .container
     .flex.info-flex
-      .info__photo: img(src="http://placehold.jp/600x400.png")
+      .info__photo: img(src="~/assets/images/suzuspo/item.jpg")
       .info__content
         .info__header
           h2.title.info-title スズスポグリル
@@ -10,10 +10,9 @@
           dt 対応車種：
           dt
             ul
-              li スズキ ジムニー（●●年）
-              li スズキ ジムニー（●●年）
-              li スズキ ジムニー（●●年）
-              li スズキ ジムニー（●●年）
+              li スズキ ジムニー / ジムニー・シエラ
+              li 年式：2018年7月～
+              li 型式：JB64W / JB74W
         span.price 33,800
           span.price-unit 円（税別）
         .info__footer
@@ -86,7 +85,6 @@
 .dl-info{
   ul{
     li{
-      display: inline-block;
       margin-right: 1em;
     }
   }

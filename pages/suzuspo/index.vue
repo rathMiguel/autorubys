@@ -6,10 +6,10 @@
     main(role="main")
       .hero
         .hero_photo
-          .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg")
+          .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg" width="900")
       LpInfo
       LpGallery
-      LpColors
+      //- LpColors
       LpHowto
       LpMedia
       LpForm
@@ -33,6 +33,14 @@ export default {
     LpForm,
     LpGallery,
     LpColors,
+  },
+  head () {
+    return {
+      title: 'スズスポグリル - あなたのジムニーを可愛く変身させるグリルパーツ',
+      meta: [
+        { hid: 'description', name: 'description', content: '「ジムニーがカッコ良くあり続けるには、時には"可愛く"なければならない」――――スズスポグリルは、あなたのジムニーをもっと愛したくなる、おしゃれなフロントパーツです。' }
+      ]
+    }
   }
 }
 </script>
@@ -73,7 +81,7 @@ export default {
 .hero_text{
   text-align: center;
   position: relative;
-  bottom: -40px;
+  bottom: -60px;
 }
 
 //

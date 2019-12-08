@@ -3,11 +3,14 @@
 body {
   color: #000000;
   font-family:$ja_go;
-  font-size:16px;
+  font-size:18px;
   line-height: 1.65;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-weight: 500;
+  @include media(sm){
+    font-size: 14px;
+  }
 }
 
 a{

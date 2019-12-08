@@ -9,6 +9,10 @@
         .gallery-media__photo: img(src="~assets/images/suzuspo/media_photo1.jpg")
         .gallery-media__caption
           p ジムニースタイル 01
+      .gallery-media__block
+        .gallery-media__photo: img(src="~assets/images/suzuspo/media_photo2.jpg")
+        .gallery-media__caption
+          p ジムニー天国2020
 </template>
 
 <style lang="scss" scoped>
@@ -29,6 +33,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
     width: 240px;
+    margin-bottom: 20px;
+    @include media(md-lg){
+      margin-left: 20px;
+      margin-right: 20px;
+    }
   }
 }
 

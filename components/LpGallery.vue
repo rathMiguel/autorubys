@@ -52,6 +52,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
+    @include media(sm){
+      height: 200px;
+    }
   }
   &__content{
     @include media(md-lg){
@@ -116,7 +119,7 @@
   line-height: 1.3;
   margin-bottom: 15px;
   @include media(sm){
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
   }
 }

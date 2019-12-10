@@ -57,6 +57,10 @@ main{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  @include media(sm){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .flex{
@@ -143,7 +147,7 @@ select,
 textarea{
   border: 1px solid #E1E1E1;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 10px 20px;
   font-family: inherit;
   font-size: 16px;
   background-color: #F8F8F8;
@@ -183,6 +187,9 @@ textarea{
 }
 
 .input-medium{
+  @include media(sm){
+    width: 15em;
+  }
   @include media(md-lg){
     width: 35em;
   }

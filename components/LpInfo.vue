@@ -26,11 +26,15 @@
   color: #FFF;
   padding-top: 80px;
   padding-bottom: 80px;
+  @include media(sm){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .info__photo{
-  width: 500px;
   @include media(md-lg){
+    width: 500px;
     margin-right: 20px;
     img{
       max-width: none;
@@ -73,6 +77,9 @@
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 5px;
+  @include media(sm){
+    font-size: 24px;
+  }
 }
 
 .price{
@@ -93,6 +100,9 @@
 .button-info{
   height: 50px;
   background-color: #122A88;
-  min-width: 400px;
+  min-width: 300px;
+  @include media(md-lg){
+    min-width: 400px;
+  }
 }
 </style>

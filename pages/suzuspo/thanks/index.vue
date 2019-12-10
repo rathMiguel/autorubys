@@ -1,22 +1,16 @@
 <template lang="pug">
-  div
-    header#header
-      span.logo: img(src="~/assets/images/common/logo_white.svg")
-      h1.title.header-title スズスポグリル
-    main(role="main")
-      .container
-        .main-header
-          h1.title 送信完了
-        .main-content
-          p お問い合わせの送信が完了しました。回答までお待ちいただきますよう、お願いいたします。
-          p: nuxt-link(to="/suzuspo") トップへ戻る
-    footer#footer
-      p: small Copyright © Auto Ruby's All Rights Reserved.
+  .container
+    .main-header
+      h1.title 送信完了
+    .main-content
+      p お問い合わせの送信が完了しました。回答までお待ちいただきますよう、お願いいたします。
+      p: nuxt-link(to="/suzuspo") トップへ戻る
 </template>
 
 <script>
 
 export default {
+  layout: 'lpSuzuspo',
   head () {
     return {
       title: '送信完了 - スズスポグリル'
@@ -71,10 +65,13 @@ export default {
   color: #FFF;
   background-color: #122A88;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   small{
     font-size: 13px;
+  }
+  p{
+    margin-bottom: 0;
   }
 }
 

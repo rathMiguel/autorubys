@@ -1,20 +1,14 @@
 <template lang="pug">
   div
-    header#header
-      span.logo: img(src="~/assets/images/common/logo_white.svg")
-      h1.title.header-title スズスポグリル
-    main(role="main")
-      .hero
-        .hero_photo
-          .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg" width="900")
-      LpInfo
-      LpGallery
-      //- LpColors
-      LpHowto
-      LpMedia
-      LpForm
-    footer#footer
-      p: small Copyright © Auto Ruby's All Rights Reserved.
+    .hero
+      .hero_photo
+        .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg" width="900")
+    LpInfo
+    LpGallery
+    //- LpColors
+    LpHowto
+    LpMedia
+    LpForm
 </template>
 
 <script>
@@ -26,6 +20,7 @@ import LpGallery from '~/components/LpGallery.vue'
 import LpColors from '~/components/LpColors.vue'
 
 export default {
+  layout: 'lpSuzuspo',
   components: {
     LpInfo,
     LpHowto,
@@ -55,6 +50,9 @@ export default {
   padding-bottom: 15px;
   .logo{
     margin-top: 10px;
+    @include media(sm){
+      width: 300px;
+    }
   }
 
   .header-title{
@@ -76,12 +74,21 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  @include media(sm){
+    height: 250px;
+  }
 }
 
 .hero_text{
   text-align: center;
   position: relative;
   bottom: -60px;
+  @include media(sm){
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 340px;
+    bottom: -30px;
+  }
 }
 
 //
@@ -92,10 +99,13 @@ export default {
   color: #FFF;
   background-color: #122A88;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   small{
     font-size: 13px;
+  }
+  p{
+    margin-bottom: 0;
   }
 }
 

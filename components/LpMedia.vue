@@ -30,11 +30,15 @@
   display: flex;
   justify-content: center;
   &__block{
-    margin-top: 20px;
     margin-bottom: 20px;
     width: 240px;
     margin-bottom: 20px;
+    @include media(sm){
+      padding-left: 5px;
+      padding-right: 5px;
+    }
     @include media(md-lg){
+      margin-top: 20px;
       margin-left: 20px;
       margin-right: 20px;
     }

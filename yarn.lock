@@ -957,6 +957,13 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^4.0.0"
 
+"@nuxtjs/google-analytics@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.2.2.tgz#ccd6ce064b0c5b4d397e8a46fcf9ed75b4369ce9"
+  integrity sha512-uzjdj9GEvPa1jB2soPAeTH75u8qbEAMV36i9PLfkv23emfUIPF1PcgsRFJOBT1x19Zeg9ywC4U8q76li912vEQ==
+  dependencies:
+    vue-analytics "^5.18.0"
+
 "@nuxtjs/style-resources@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/style-resources/-/style-resources-1.0.0.tgz#7c4d6be19d7f7cc5d687d689f2ab16c0b94773a1"
@@ -4133,6 +4140,11 @@ is-glob@^4.0.0, is-glob@^4.0.1, is-glob@~4.0.1:
   dependencies:
     is-extglob "^2.1.1"
 
+is-https@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-https/-/is-https-1.0.0.tgz#9c1dde000dc7e7288edb983bef379e498e7cb1bf"
+  integrity sha512-1adLLwZT9XEXjzhQhZxd75uxf0l+xI9uTSFaZeSESjL3E1eXSPpO+u5RcgqtzeZ1KCaNvtEwZSTO2P4U5erVqQ==
+
 is-number@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-3.0.0.tgz#24fd6201a4782cf50561c810276afc7d12d71195"
@@ -6556,6 +6568,13 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+redirect-ssl@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/redirect-ssl/-/redirect-ssl-1.4.1.tgz#4d9a91ac4b4f2eb358272a8e4de3afaf44554ede"
+  integrity sha512-8Lg6swHUDPydPKRTV2faJMF2foKw8oUFE7cWoieRpoU57ZjM1cdFVp3YcBar1tM5L6GD9KMDNu6uc0qi/3zSHQ==
+  dependencies:
+    is-https "^1.0.0"
+
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
@@ -7895,6 +7914,11 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
+
+vue-analytics@^5.18.0:
+  version "5.19.0"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.19.0.tgz#c959ecae1eaeed66f596a7ebe56d1cd2707a969e"
+  integrity sha512-qKlJwHa6vtjNw8FhOQo9q2a5EgSUPoMb1POcfHmOy6SFXRjY3s9BKC3Q1JLSFITpwXK5PB9d1X/vw/kbxk69vg==
 
 vue-client-only@^2.0.0:
   version "2.0.0"

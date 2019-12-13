@@ -127,8 +127,10 @@
 .photo1{
   background-image: url('~assets/images/photo/18300.jpg');
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  @include media(lg){
+    background-attachment: fixed;
+  }
 }
 
 .photo2{

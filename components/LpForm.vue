@@ -36,7 +36,7 @@
     .form-outro
       p こちらからも購入できます
       ul.form-outro__list
-        li: a(href="" target="_blank"): img(src="~/assets/images/suzuspo/yshopping_logo.png").logo-y
+        li: a(href="https://store.shopping.yahoo.co.jp/auto-rubys/a5d5a5eda5.html" target="_blank"): img(src="~/assets/images/suzuspo/yshopping_logo.png").logo-y
 </template>
 
 <script>

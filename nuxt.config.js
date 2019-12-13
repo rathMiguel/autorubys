@@ -38,6 +38,9 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-154422922-1'
+    }]
   ],
   /*
   ** Nuxt.js modules

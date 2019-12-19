@@ -125,7 +125,7 @@
 }
 
 .photo1{
-  background-image: url('~assets/images/photo/18300.jpg');
+  background-image: url('~assets/images/suzuspo/19307.jpg');
   background-position: center center;
   background-size: cover;
   @include media(lg){

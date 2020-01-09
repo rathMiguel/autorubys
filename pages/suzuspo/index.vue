@@ -40,7 +40,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+body{
+  font-family:$ja_suzuspo;
+  @include media(pc){
+    font-size: 18px;
+  }
+}
 
 #header{
   text-align: center;

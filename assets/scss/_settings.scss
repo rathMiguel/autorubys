@@ -7,7 +7,7 @@
 $color-default:   #111;
 $color-link:      #0089fc;
 
-$color-black:     #000;
+$color-black:     #222;
 $color-white:     #FFF;
 $color-gray:      #CCC;
 
@@ -55,7 +55,8 @@ $media-types: (
 // フォント
 //=====================================
 
-$ja_go: 'M PLUS Rounded 1c', YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$ja_go: YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$ja_suzuspo: 'M PLUS Rounded 1c', YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 $ja_yu:   '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 $ja_min:  '游明朝' , 'Yu Mincho' , '游明朝体' , 'YuMincho', 'HG明朝B', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
 $ja_maru: 'ヒラギノ丸ゴ Pro W4','Hiragino maru Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','Verdana','Osaka',sans-serif;

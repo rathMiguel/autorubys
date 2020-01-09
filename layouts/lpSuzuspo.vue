@@ -9,7 +9,7 @@ div
     p: small Copyright © Auto Ruby's All Rights Reserved.
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #header{
   text-align: center;
   background-color: #122A88;

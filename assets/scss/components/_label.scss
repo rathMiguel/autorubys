@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.c-label-ib{
+  display: inline-block;
+  &_primary{
+
+  }
+}
+
+.label-required{
+  font-size: 0.68em;
+  color: #FFF;
+  background-color: #B20000;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 1em;
+}

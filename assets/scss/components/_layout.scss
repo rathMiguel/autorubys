@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.container{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  @include media(sm){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &-single{
+    max-width: 800px;
+  }
+}
+
+.flex{
+  display: flex;
+  @include media(sm){
+    flex-direction: column;
+  }
+}

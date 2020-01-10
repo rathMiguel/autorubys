@@ -5,6 +5,9 @@ header#header
       .header-top_wrap
         .header-top_catch
           p 車のことならオートルビーズにお任せください
+        .header-top_tel
+          span TEL：
+          a(href="tel:0857720727").tel 0857-72-0727
   .header-main
     .container
       .header-main_wrap
@@ -40,10 +43,18 @@ $color-primary: #D70247;
     }
   }
 
+  &_wrap{
+    display: flex;
+  }
+
   &_catch{
     p{
       margin-bottom: 0;
     }
+  }
+
+  &_tel{
+    margin-left: auto;
   }
 }
 

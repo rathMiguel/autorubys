@@ -31,7 +31,7 @@ div
           tr
             th 金曜日
             td 10時00分～19時00分
-          tr.bg-saturday
+          tr
             th 土曜日
             td 10時00分～19時00分
           tr.bg-sunday

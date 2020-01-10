@@ -326,6 +326,28 @@ textarea{
     text-align: center;
   }
 
+  &_secondary{
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 5px;
+    border-bottom: 3px solid #D70247;
+    text-align: left;
+    position: relative;
+    color: #D70247;
+    &:before{
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 7em;
+      background-color: #CCC;
+      margin-bottom: -3px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
   &_info{
     font-size: 1.5em;
     margin-bottom: 20px;

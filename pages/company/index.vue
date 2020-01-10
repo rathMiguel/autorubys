@@ -38,7 +38,7 @@ div
           tr
             th 加盟店
             td
-    section.section.section-page
+    section.section.section-page.bg-secondary
       .container.container-single
         .section-header
           h2.c-title_info 沿革

@@ -169,7 +169,8 @@ $color-primary: #D70247;
 }
 
 .service-card{
-  border: 1px solid #EEE;
+  border: 1px solid #DDD;
+  background-color: #FFF;
   @include media(md-lg){
     margin-left: -1px;
     margin-right: -1px;

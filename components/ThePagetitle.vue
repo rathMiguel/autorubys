@@ -49,6 +49,7 @@ export default {
     padding-top: 10px;
     margin-top: 10px;
     color: #CCC;
+    letter-spacing: 0.2em;
     &:before{
       display: block;
       content: "";

@@ -39,7 +39,7 @@ div
             td 定休日
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .access-main{
   margin-top: 60px;

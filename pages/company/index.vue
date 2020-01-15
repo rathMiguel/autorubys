@@ -66,7 +66,7 @@ div
             td 内容が入ります内容が入ります内容が入ります内容が入ります
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .table-info{
   th{

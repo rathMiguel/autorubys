@@ -46,11 +46,9 @@ $color-primary: #D70247;
   padding-bottom: 2px;
 
   &_wrap{
-    @include media(md-lg){
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &_header{
@@ -105,7 +103,18 @@ $color-primary: #D70247;
   }
   &_list{
     display: flex;
+    @include media(sm){
+      display: block;
+      text-align: center;
+    }
     li{
+      @include media(sm){
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
        @include media(md-lg){
          margin-left: 1.5em;
        }
@@ -133,6 +142,19 @@ address{
   }
   small{
     font-size: 0.65em;
+  }
+}
+
+.footer-address{
+  @include media(sm){
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-logo{
+  @include media(sm){
+    text-align: center;
   }
 }
 

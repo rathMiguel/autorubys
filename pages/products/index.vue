@@ -35,51 +35,23 @@ div
               .product-gallery_block: img(src="http://placehold.jp/400x300.png")
 </template>
 
-<style lang="scss">
-.subsection{
-  margin-bottom: 60px;
-}
-
-.subsection-main{
-  &_flex{
-    @include media(md-lg){
-      // display: flex;
-    }
-  }
-}
-
-.subsection-header{
-  margin-bottom: 20px;
-  @include media(md-lg){
-    margin-bottom: 40px;
-  }
-}
-
-.subsection-photo{
-  @include media(md-lg){
-    float: right;
-    margin-left: 20px;
-  }
-}
-
-.subsection-content{
-  @include media(md-lg){
-
-  }
-}
-
-.subsection-footer{
-  text-align: center;
-  margin-top: 40px;
-}
+<style lang="scss" scoped>
 
 .product-gallery{
   display: flex;
   margin-left: -10px;
   margin-right: -10px;
+  @include media(sm){
+    margin-left: -5px;
+    margin-right: -5px;
+  }
   &_block{
     margin-left: 10px;
     margin-right: 10px;
+    @include media(sm){
+      margin-left: 5px;
+      margin-right: 5px;
+    }
   }
 }
 

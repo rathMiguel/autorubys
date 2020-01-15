@@ -15,6 +15,10 @@
   @include media(lg){
     font-size: 16px;
   }
+  @include media(sm){
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   a{
     color: #FFF;
   }
@@ -33,6 +37,9 @@
   border: 1px solid #FFF;
   display: inline-block;
   padding: 1px 10px;
+  @include media(sm){
+    margin-bottom: 5px;
+  }
 }
 
 .news-dl{

@@ -34,6 +34,9 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include media(sm){
+      height: 140px;
+    }
   }
 
   .title{

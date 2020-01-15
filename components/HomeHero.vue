@@ -55,6 +55,9 @@ $color-primary: #D70247;
   height: 600px;
   position: relative;
   z-index: -10;
+  @include media(sm){
+    height: 250px;
+  }
 }
 
 .hero-content{
@@ -62,6 +65,12 @@ $color-primary: #D70247;
   right: 20px;
   top: calc(50% - 6em);
   font-weight: 700;
+  @include media(sm){
+    text-align: center;
+    width: 100%;
+    top: 15px;
+    right: 0;
+  }
   p.hero-content_lead{
     text-shadow: 0 0 5px #FFF;
     display: inline-block;
@@ -69,6 +78,10 @@ $color-primary: #D70247;
     margin-bottom: 10px;
     font-size: 40px;
     border-bottom: 3px solid $color-primary;
+    @include media(sm){
+      font-size: 16px;
+      text-align: center;
+    }
   }
 }
 </style>

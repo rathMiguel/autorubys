@@ -114,6 +114,9 @@ $color-primary: #D70247;
 .section-footer{
   text-align: center;
   margin-top: 40px;
+  @include media(sm){
+    margin-top: 20px;
+  }
 }
 
 .bg-secondary{
@@ -131,10 +134,17 @@ $color-primary: #D70247;
     padding: 25px 10px;
   }
   dt{
-    float: left;
+    @include media(sm){
+      margin-bottom: 5px;
+    }
+    @include media(md-lg){
+      float: left;
+    }
   }
   dd{
-    padding-left: 8em;
+    @include media(md-lg){
+      padding-left: 8em;
+    }
   }
   a{
     color: #111;
@@ -147,6 +157,9 @@ $color-primary: #D70247;
 
 .vision-header{
   margin-bottom: 60px;
+  @include media(sm){
+    margin-bottom: 20px;
+  }
 }
 
 .vision-lead{
@@ -158,6 +171,9 @@ $color-primary: #D70247;
 .vision-footer{
   text-align: center;
   margin-top: 60px;
+  @include media(sm){
+    margin-top: 20px;
+  }
 }
 
 //
@@ -166,6 +182,9 @@ $color-primary: #D70247;
 
 .service-cards{
   display: flex;
+  @include media(sm){
+    display: block;
+  }
 }
 
 .service-card{
@@ -204,6 +223,9 @@ $color-primary: #D70247;
 .service-footer{
   text-align: center;
   margin-top: 40px;
+  @include media(sm){
+    margin-top: 20px;
+  }
 }
 
 //
@@ -213,6 +235,9 @@ $color-primary: #D70247;
 .product-cards{
   display: flex;
   justify-content: center;
+  @include media(sm){
+    display: block;
+  }
 }
 
 .product-card{

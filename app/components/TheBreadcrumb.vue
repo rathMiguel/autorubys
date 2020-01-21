@@ -1,7 +1,7 @@
 <template lang="pug">
 .breadcrumb
   .container
-    ul.breadcrumb_list(v-for="item in list")
+    ul.breadcrumb_list
       li: nuxt-link(to="/") ホーム
       template(v-for="item in list")
         li(v-if="item.link"): nuxt-link(:to="item.link") {{ item.title }}

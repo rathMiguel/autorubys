@@ -9,7 +9,7 @@ header#header
           span TEL：
           a(href="tel:0857720727").tel 0857-72-0727
   .header-spnav
-    a(href="tel:0857720727").tel-sp: img(src="~assets/images/icons/467_s_h.svg" alt="株式会社　オートルビーズ" width=32)
+    a(href="tel:0857720727").tel-sp: img(src="~/assets/images/icons/467_s_h.svg" alt="株式会社　オートルビーズ" width=32)
     #menu_btn.menu_btn(v-on:click="navToggle()" v-bind:class="(isActive === true) ? 'is-active' : ''")
       span
       span
@@ -18,7 +18,7 @@ header#header
     .container
       .header-main_wrap
         .header-main_logo
-          nuxt-link(to="/"): img(src="~assets/images/common/logo.svg" alt="株式会社　オートルビーズ" width=300)
+          nuxt-link(to="/"): img(src="~/assets/images/common/logo.svg" alt="株式会社　オートルビーズ" width=300)
         .header-main_nav(v-bind:class="(isActive === true) ? 'is-active' : ''")
           ul.header-main_list
             li: nuxt-link(to='/service/') サービス案内

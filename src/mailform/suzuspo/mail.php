@@ -132,7 +132,7 @@ $mailFooterDsp = 1;
 //上記で「1」を選択時に表示する署名（フッター）（FOOTER～FOOTER;の間に記述してください）
 $mailSignature = <<< FOOTER
 
-このメールは オートルビーズ (https://autorubys.com/) のお問い合わせフォームから送信されました
+このメールは オートルビーズ (https://www.autorubys.com/) のお問い合わせフォームから送信されました
 
 FOOTER;
 

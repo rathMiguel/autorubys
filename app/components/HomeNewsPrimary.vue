@@ -5,7 +5,7 @@
       h3.news-title お知らせ
       dl.news-dl
         dt 2019.12.01
-        dd: a(href="") 年末年始の営業について
+        dd 年末は30日まで、年始は5日より営業いたします。
 </template>
 
 <style lang="scss" scoped>

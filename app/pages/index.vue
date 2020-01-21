@@ -21,23 +21,23 @@ div
       .container
         .service-cards
           .service-card
-            .service-card_photo: img(src="http://placehold.jp/400x300.png")
+            .service-card_photo: img(src="~/assets/images/home/service_photo1.jpg")
             .service-card_header
-              h2.title 自動車販売
+              h2.title 新車、中古車販売
             .service-card_main
-              p 説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります
+              p 各種メーカーの新車販売はもちろん、お客様のお探しの中古車もお探し致します<br>
           .service-card
-            .service-card_photo: img(src="http://placehold.jp/400x300.png")
+            .service-card_photo: img(src="~/assets/images/home/service_photo2.jpg")
             .service-card_header
-              h2.title 自動車整備・メンテナンス
+              h2.title 車検、修理、メンテナンス
             .service-card_main
-              p 説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります
+              p 自動車整備一般<br>自動車車検業務<br>中国運輸局認証工場
           .service-card
-            .service-card_photo: img(src="http://placehold.jp/400x300.png")
+            .service-card_photo: img(src="~/assets/images/home/service_photo3.jpg")
             .service-card_header
-              h2.title 自動車保険の取り扱い
+              h2.title 事故車修理及び鈑金塗装
             .service-card_main
-              p 説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります
+              p 事故などによる鈑金塗装修理<br>パーツ等の塗装施工
         .service-footer
           nuxt-link(to="/service/").c-button.c-button_primary2 サービス内容を詳しく見る
   section.section#products
@@ -50,18 +50,11 @@ div
       .container
         .product-cards
           .product-card
-            .product-card_photo: img(src="http://placehold.jp/400x150.png")
+            .product-card_photo: img(src="~/assets/images/home/suzuspo_photo.jpg")
             .product-card_header
               h2.title スズスポグリル
             .product-card_main
-              p 説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります
-          .product-card
-            .product-card_photo: img(src="http://placehold.jp/400x150.png")
-            .product-card_header
-              h2.title スズスポグリル
-                span.c-label-ib.c-label-ib_primary
-            .product-card_main
-              p 説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります
+              p 黒単色ならスポーティに、塗り分ければレトロ風味の愛らしさに。ジムニーがスズスポグリル一つで個性的なスタイルに生まれ変わります。
     .section-footer
       nuxt-link(to="/products/").c-button.c-button_primary2 製品情報を詳しく見る
   section.section#news.bg-secondary
@@ -71,21 +64,8 @@ div
     .section-main
       .container
         dl.news-list
-          dt 2019.12.01
-          dd: a(href="#") お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります
-        dl.news-list
-          dt 2019.12.01
-          dd: a(href="#") お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります
-        dl.news-list
-          dt 2019.12.01
-          dd: a(href="#") お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります
-        dl.news-list
-          dt 2019.12.01
-          dd: a(href="#") お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります
-        dl.news-list
-          dt 2019.12.01
-          dd: a(href="#") お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります
-
+          dt 2019.1.21
+          dd: a(href="/news/") ホームページをリニューアルしました
 </template>
 
 <style lang="scss">
@@ -190,6 +170,7 @@ $color-primary: #D70247;
 .service-card{
   border: 1px solid #DDD;
   background-color: #FFF;
+  width: 100%;
   @include media(md-lg){
     margin-left: -1px;
     margin-right: -1px;

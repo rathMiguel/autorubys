@@ -64,7 +64,7 @@ div
     .section-main
       .container
         dl.news-list
-          dt 2019.1.21
+          dt 2019.12.01
           dd: a(href="/news/") ホームページをリニューアルしました
 </template>
 

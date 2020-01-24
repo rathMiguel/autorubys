@@ -7,7 +7,7 @@ div
       .container.container-single
         .single-header
           h2.c-title.title-single {{ pagetitle }}
-          span.meta-date 2020.1.19
+          span.meta-date 2019.12.01
         .single-content
           p この度、より分かりやすく皆様に弊社について知っていただくため、ホームページをリニューアル致しました。
           p より分かりやすく、使いやすくなったかと思います。

@@ -48,8 +48,18 @@ export default {
   */
   modules: [
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.autorubys.com',
+    // generate: true,
+    exclude: [
+      '/wp-admin'
+    ]
+  },
 
   webfontloader: {
     google: {

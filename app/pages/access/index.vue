@@ -52,6 +52,9 @@ div
 .access-gmap{
   iframe{
     width: 100%;
+    @include media(sm){
+      height: 280px;
+    }
   }
 }
 

@@ -43,6 +43,9 @@ small{
   height: 80px;
   padding-left: 25px;
   padding-right: 25px;
+  @include media(sm){
+    height: 60px;
+  }
   @include media(md-lg){
     width: 450px;
   }
@@ -51,6 +54,9 @@ small{
   }
   .tel-text{
     font-size: 2em;
+    @include media(sm){
+      font-size: 1.5em;
+    }
   }
 }
 </style>

@@ -140,7 +140,9 @@
   background-color: #FF8000;
   height: 60px;
   font-size: 20px;
-  width: 300px;
+  @include media(sm){
+    width: 100%;
+  }
   @include media(md-lg){
     width: 400px;
   }

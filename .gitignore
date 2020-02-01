@@ -1,3 +1,20 @@
+.sass-cache/
+node_modules/
+
+Thumbs.db
+ftpconfig.yml
+*.LCK
+*.map
+
+.vagrant
+.DS_STORE
+package-lock.json
+yarn.lock
+
+www/
+dist/
+public/
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs

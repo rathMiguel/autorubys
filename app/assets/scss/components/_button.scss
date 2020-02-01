@@ -23,7 +23,7 @@
   &_primary{
     border-radius: 5px;
     background-color: #D70247;
-    min-width: 320px;
+    min-width: 320px - 15px - 15px;
     padding: 10px;
     flex-direction: column;
     font-weight: 700;
@@ -41,7 +41,7 @@
   &_primary2{
     border-radius: 5px;
     background-color: #D70247;
-    min-width: 280px;
+    min-width: 320px - 15px - 15px;
     padding: 10px;
     flex-direction: column;
     font-weight: 700;

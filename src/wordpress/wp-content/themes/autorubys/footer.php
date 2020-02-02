@@ -7,8 +7,8 @@
         </div>
         <div class="block-social">
           <ul class="block-social_list">
-            <li><a href="https://www.instagram.com/autorubys696/" target="_blank"><img src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width="24"/></a></li>
-            <li><a href="https://www.youtube.com/channel/UCJVVwZUZLVwaC0s9baUX0WA" target="_blank"><img src="~/assets/images/icons/18-youtube.svg" alt="YouTube" width="24"/></a></li>
+            <li><a href="https://www.instagram.com/autorubys696/" target="_blank"><img src="/images/icons/38-instagram.svg" alt="Instagram" width="24"/></a></li>
+            <li><a href="https://www.youtube.com/channel/UCJVVwZUZLVwaC0s9baUX0WA" target="_blank"><img src="/images/icons/18-youtube.svg" alt="YouTube" width="24"/></a></li>
           </ul>
         </div>
       </div>
@@ -19,7 +19,7 @@
       <div class="footer-main_wrap">
         <div class="footer-address">
           <div class="footer-logo">
-            <a href="/"><img src="~/assets/images/common/logo_white.svg" alt="株式会社　オートルビーズ" width="270" /></a>
+            <a href="/"><img src="/images/common/logo_white.svg" alt="株式会社　オートルビーズ" width="270" /></a>
           </div>
           <h3 class="c-title"><small>株式会社オートルビーズ</small></h3><address><span class="address-text">〒681-0073 鳥取県岩美郡岩美町大字大谷1-1485</span></address></div>
         <div class="footer-nav">

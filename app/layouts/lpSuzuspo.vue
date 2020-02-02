@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   header#header
-    span.logo: img(src="~/assets/images/common/logo_white.svg")
+    span.logo: img(src="/assets/images/common/logo_white.svg")
     h1.title.header-title スズスポグリル
   main(role="main")
     nuxt

@@ -1,0 +1,40 @@
+#===============================
+# 基本設定
+#===============================
+# タイトル、URLなど
+general:
+  encode:    'UTF-8'
+  lang:      'ja'
+  pageTitle: 'オートルビーズ'
+  user:      &user '作者名'
+  url:       &url 'https://www.autorubys.com/'
+  version:   &version 1.0
+  develop:   false
+
+# ファイルパス
+path:
+  # 各ステージのパス（頭に./, 末尾に/）
+  input:      './src/'
+  dist:       './public/'
+  www:        './www/app/public/'
+  fonts:      './fonts/'
+
+  # 各主要ファイルのパス（末尾のみ/）
+  css:  'wp-content/themes/autorubys/css/'
+  js:   'wp-content/themes/autorubys/js/'
+  pug:
+    - './src/pug/**/*.pug'
+    - '!./src/pug/index.pug'
+    - '!./src/pug/**/_*.pug'
+  wp:   'wordpress/'
+
+  # BrowserSyncのパス設定
+  start: '/'
+  proxy: 'http://autorubys.local/'
+
+vendor:
+  css:
+  js:
+    - './node_modules/vue/dist/vue.js'
+  img:
+  fonts:

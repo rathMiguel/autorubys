@@ -63,9 +63,7 @@ div
       .section-title_en News
     .section-main
       .container
-        dl.news-list
-          dt 2019.12.01
-          dd: a(href="/news/") ホームページをリニューアルしました
+        TheNewsList
 </template>
 
 <style lang="scss">
@@ -261,11 +259,13 @@ $color-primary: #D70247;
 
 import HomeHero from '~/components/HomeHero.vue'
 import HomeNewsPrimary from '~/components/HomeNewsPrimary.vue'
+import TheNewsList from '~/components/TheNewsList.vue'
 
 export default {
   components: {
     HomeHero,
-    HomeNewsPrimary
+    HomeNewsPrimary,
+    TheNewsList
   },
   head () {
     return {

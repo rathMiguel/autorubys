@@ -1,12 +1,34 @@
 <template lang="pug">
-#news
-  .container
-    .news-wrap
-      h3.news-title お知らせ
-      dl.news-dl
-        dt 2019.12.01
-        dd 年末は30日まで、年始は5日より営業いたします。
+div(v-if="posts.length")
+  #news
+    .container
+      .news-wrap
+        h3.news-title お知らせ
+        dl.news-dl(v-for="post in posts")
+          dt {{ $moment(post.date).format("YYYY.MM.DD") }}
+          dd {{ post.title.rendered }}
 </template>
+
+<script>
+
+const axios = require('axios')
+
+export default {
+  data() {
+    return {
+      posts: [],
+    }
+  },
+  mounted(){
+    axios.get('https://autorubys.com/news/wp-json/wp/v2/posts/?per_page=1&categories=8')
+    .then((res) => {
+      return this.posts = res.data
+    }).catch((e => {
+      error({ searchPosts: e.response.status, message: e.message })
+    }))
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 #news{

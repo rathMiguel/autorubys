@@ -9,14 +9,14 @@
       </div>
     </div>
   </div>
-  <div class="header-spnav"><a class="tel-sp" href="tel:0857720727"><img src="~/assets/images/icons/467_s_h.svg" alt="株式会社　オートルビーズ" width="32"/></a>
+  <div class="header-spnav"><a class="tel-sp" href="tel:0857720727"><img src="/images/icons/467_s_h.svg" alt="株式会社　オートルビーズ" width="32"/></a>
     <div class="menu_btn" id="menu_btn" v-on:click="navToggle()" v-bind:class="(isActive === true) ? 'is-active' : ''"><span></span><span></span><span></span></div>
   </div>
   <div class="header-main">
     <div class="container">
       <div class="header-main_wrap">
         <div class="header-main_logo">
-          <a href="/"><img src="~/assets/images/common/logo.svg" alt="株式会社　オートルビーズ" width="300" /></a>
+          <a href="/"><img src="/images/common/logo.svg" alt="株式会社　オートルビーズ" width="300" /></a>
         </div>
         <div class="header-main_nav" v-bind:class="(isActive === true) ? 'is-active' : ''">
           <ul class="header-main_list">

@@ -49,7 +49,9 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/axios',
+    ['@nuxtjs/moment', ['ja']]
   ],
 
   sitemap: {

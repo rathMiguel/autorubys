@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.single-header{
+  margin-bottom: 1.6em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.title-single{
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.single-content{
+  margin-bottom: 40px;
+  @include media(md-lg){
+    margin-bottom: 80px;
+  }
+}
+
+.meta-date{
+  color: #AAA;
+  font-size: 14px;
+}

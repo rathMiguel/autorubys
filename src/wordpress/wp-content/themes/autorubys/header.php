@@ -4,6 +4,7 @@
       <div class="header-top_wrap">
         <div class="header-top_catch">
           <p>車のことならオートルビーズにお任せください</p>
+          <p>{{ txt }}</p>
         </div>
         <div class="header-top_tel"><span>TEL：</span><a class="tel" href="tel:0857720727">0857-72-0727</a></div>
       </div>

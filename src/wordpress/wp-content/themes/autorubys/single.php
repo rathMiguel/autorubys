@@ -2,6 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="<?php the_title() ?>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<?php the_permalink() ?>" />
+  <?php if (has_post_thumbnail()): ?>
+    <meta property="og:image" content="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' );
+
+ ?>" />
+  <?php endif ?>
+  <meta property="og:site_name" content="株式会社オートルビーズ" />
+  <meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/css/style.css">
   <title><?php the_title() ?> - 株式会社オートルビーズ</title>
 </head>
@@ -44,6 +55,7 @@
       </div>
     </main>
   <?php get_footer() ?>
+  <script src="<?php echo get_template_directory_uri() ?>/js/vendor.js"></script>
   <script src="<?php echo get_template_directory_uri() ?>/js/script.js"></script>
 </body>
 </html>

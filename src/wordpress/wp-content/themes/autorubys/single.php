@@ -57,5 +57,14 @@
   <?php get_footer() ?>
   <script src="<?php echo get_template_directory_uri() ?>/js/vendor.js"></script>
   <script src="<?php echo get_template_directory_uri() ?>/js/script.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154422922-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154422922-1');
+  </script>
 </body>
 </html>

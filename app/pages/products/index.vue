@@ -14,9 +14,9 @@ div
               p 黒単色ならスポーティに、塗り分ければレトロ風味の愛らしさに。ジムニーがスズスポグリル一つで個性的なスタイルに生まれ変わります。
           .subsection-main
             .product-gallery
-              .product-gallery_block: img(src="~/assets/images/products/suzuspo_photo2.jpg")
               .product-gallery_block: img(src="~/assets/images/products/suzuspo_photo3.jpg")
               .product-gallery_block: img(src="~/assets/images/products/suzuspo_photo4.jpg")
+              .product-gallery_block: img(src="~/assets/images/products/suzuspo_photo2.jpg")
           .subsection-footer
             nuxt-link(to="/suzuspo/").c-button.c-button_primary2 詳しくはこちら
 </template>

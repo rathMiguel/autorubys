@@ -68,7 +68,7 @@ $color-primary: #D70247;
     }
   }
   &_logo{
-    @include media(lg){
+    @include media(md-lg){
       padding-top: 15px;
       padding-bottom: 15px;
     }

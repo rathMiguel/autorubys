@@ -19,6 +19,19 @@ div
               .product-gallery_block: img(src="~/assets/images/products/suzuspo_photo2.jpg")
           .subsection-footer
             nuxt-link(to="/suzuspo/").c-button.c-button_primary2 詳しくはこちら
+        section.subsection
+          .subsection-header
+            h2.c-title.c-title_secondary クラシック22スタイルグリル
+          .subsection-main.subsection-main_flex
+            .subsection-photo: img(src="~/assets/images/products/classic_photo1.jpg")
+            .subsection-content
+              p 二代目ジムニー（JA22）風のフロントグリル。<br>古き良きジムニーのスタイルを新しいジムニーに引き継いだ、オートルビーズからの新しい提案です。
+    .section
+      .container
+        .products-outro
+          p オートルビーズが開発した製品は<br>こちらから購入できます
+          ul.form-outro__list
+            li: a(href="https://store.shopping.yahoo.co.jp/auto-rubys/" target="_blank"): img(src="~/assets/images/suzuspo/yshopping_logo.png").logo-y
 </template>
 
 <style lang="scss" scoped>
@@ -51,6 +64,20 @@ div
 
 .subsection-main{
   overflow: hidden;
+}
+
+.products-outro{
+  text-align: center;
+  @include media(md-lg){
+    margin-top: -80px;
+  }
+}
+
+.logo-y{
+  width: 240px;
+  @include media(sm){
+    width: 240px;
+  }
 }
 
 </style>

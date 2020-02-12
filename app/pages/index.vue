@@ -45,7 +45,7 @@ div
       .section-title 製品情報
       .section-title_en Products
     .text-center
-      p 弊社で開発した製品を紹介します
+      p オートルビーズが開発した製品を紹介します
     .section-main
       .container
         .product-cards
@@ -55,6 +55,12 @@ div
               h2.title スズスポグリル
             .product-card_main
               p 黒単色ならスポーティに、塗り分ければレトロ風味の愛らしさに。ジムニーがスズスポグリル一つで個性的なスタイルに生まれ変わります。
+          .product-card
+            .product-card_photo: img(src="~/assets/images/home/classic_photo.jpg")
+            .product-card_header
+              h2.title クラシック22スタイルグリル
+            .product-card_main
+              p 二代目ジムニー（JA22）風のフロントグリル。<br>古き良きジムニーのスタイルを新しいジムニーに引き継いだ、オートルビーズからの新しい提案です。
     .section-footer
       nuxt-link(to="/products/").c-button.c-button_primary2 製品情報を詳しく見る
   section.section#news.bg-secondary
@@ -271,7 +277,7 @@ export default {
     return {
       title: '株式会社オートルビーズ - 鳥取県 岩美町の車販売、修理・メンテナンスまで',
       meta: [
-        { hid: 'description', name: 'description', content: '株式会社オートルビーズは鳥取県を中心に展開する自動車販売、修理、メンテナンスを行う会社です。' }
+        { hid: 'description', name: 'description', content: '株式会社オートルビーズはスズキ　ジムニーのカスタムパーツを開発、販売を行っています。また、鳥取県を中心に自動車販売、修理、メンテナンスを行っています。' }
       ]
     }
   }

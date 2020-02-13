@@ -26,6 +26,12 @@ div
             .subsection-photo: img(src="~/assets/images/products/classic_photo1.jpg")
             .subsection-content
               p 二代目ジムニー（JA22）風のフロントグリル。<br>古き良きジムニーのスタイルを新しいジムニーに引き継いだ、オートルビーズからの新しい提案です。
+          .subsection-main
+            .product-gallery
+              .product-gallery_block: img(src="~/assets/images/products/classic_photo3.jpg")
+              .product-gallery_block: img(src="~/assets/images/products/classic_photo4.jpg")
+              .product-gallery_block: img(src="~/assets/images/products/classic_photo2.jpg")
+    hr.line
     .section
       .container
         .products-outro
@@ -35,6 +41,13 @@ div
 </template>
 
 <style lang="scss" scoped>
+
+.subsection{
+  &:last-child{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
 
 .product-gallery{
   display: flex;
@@ -77,6 +90,20 @@ div
   width: 240px;
   @include media(sm){
     width: 240px;
+  }
+}
+
+.line{
+  border: none;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  height: 3px;
+  @include media(sm){
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 }
 

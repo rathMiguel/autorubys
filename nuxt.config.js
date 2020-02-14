@@ -12,6 +12,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
+    script: [
+      { src: '/script/ptengine.js' }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
@@ -29,6 +32,7 @@ export default {
     'node_modules/slick-carousel/slick/slick-theme.css',
     '~/assets/scss/style.scss'
   ],
+
   /*
   ** Plugins to load before mounting the App
   */

@@ -1,43 +1,39 @@
 <template lang="pug">
 .colors.section
   .section-header
-    h2.title.section-title カラーバリエーション
+    h2.title.section-title カラーバリエーション例
     span.section-title__en Colors
   .container
     .slide-wrap
       slick(ref="slick" :options="slickOptions")
         .slide-block
-          .slide-block_photo: img(src="http://placehold.jp/600x400.png")
-          .slide-block_caption カラー名1
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_yellow_black.jpg")
+          .slide-block_caption イエロー×ブラック
         .slide-block
-          .slide-block_photo: img(src="http://placehold.jp/600x400.png")
-          .slide-block_caption カラー名2
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_white_black.jpg")
+          .slide-block_caption ホワイト×ブラック
         .slide-block
-          .slide-block_photo: img(src="http://placehold.jp/600x400.png")
-          .slide-block_caption カラー名3
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_Green_White.jpg")
+          .slide-block_caption グリーン×ホワイト
         .slide-block
-          .slide-block_photo: img(src="http://placehold.jp/600x400.png")
-          .slide-block_caption カラー名4
-        .slide-block
-          .slide-block_photo: img(src="http://placehold.jp/600x400.png")
-          .slide-block_caption カラー名5
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_black_White.jpg")
+          .slide-block_caption ブラック×ホワイト
   .colors-outro
     .container
-      p グリルのカラーカスタマイズも承っております。詳しくはお問い合わせください。
+      p グリルのカラーカスタマイズも承っております。詳しくは
+        nuxt-link(v-scroll-to="'#form'" to) お問い合わせ
+        |ください。
 </template>
 
 <script>
 
-import Slick from 'vue-slick'
-
 export default {
-  components: {
-    Slick
-  },
   data() {
     return {
       slickOptions: {
+        fade: true,
         dots: true,
+        speed: 100,
         // arrows: true,
         variableWidth: false,
         autoplay: false,
@@ -57,19 +53,24 @@ export default {
 }
 
 .slide-wrap{
-  max-width: 600px + 80px;
+  max-width: 400px + 80px;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFF;
   border: 1px solid #DDD;
-  padding: 40px;
+  padding: 20px;
+  @include media(sm){
+    padding: 10px;
+  }
 }
 
 /deep/ .slick-slide{
   outline: none;
+  margin-bottom: 1em;
 }
 
 /deep/ .slick-dots{
+  padding-top: 2em;
   li{
     text-align: center;
     width: auto;
@@ -86,30 +87,47 @@ export default {
         color: transparent;
         position: absolute;
       }
+      &:after{
+        content: "";
+        position: absolute;
+        left: -1px;
+        display: block;
+        height: 14px;
+        width: 28px;
+        background-color: transparent;
+        border-radius: 0 0 200px 200px;
+      }
     }
     &:nth-child(1){
       button{
-        background-color: red;
+        background-color: #F2FF00;
+        &:after{
+          background-color: #333;
+        }
       }
     }
     &:nth-child(2){
       button{
-        background-color: blue;
+        background-color: #EFEFEF;
+        &:after{
+          background-color: #333;
+        }
       }
     }
     &:nth-child(3){
       button{
-        background-color: yellow;
+        background-color: #1A6600;
+        &:after{
+          background-color: #EFEFEF;
+        }
       }
     }
     &:nth-child(4){
       button{
-        background-color: green;
-      }
-    }
-    &:nth-child(5){
-      button{
-        background-color: black;
+        background-color: #333;
+        &:after{
+          background-color: #EFEFEF;
+        }
       }
     }
   }

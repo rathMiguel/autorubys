@@ -5,6 +5,7 @@
         .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg" width="900")
     LpInfo
     LpGallery
+    LpColors
     LpHowto
     LpMedia
     LpForm
@@ -15,6 +16,7 @@ import LpInfo from '~/components/LpInfo.vue'
 import LpHowto from '~/components/LpHowto.vue'
 import LpMedia from '~/components/LpMedia.vue'
 import LpForm from '~/components/LpForm.vue'
+import LpColors from '~/components/LpColors.vue'
 import LpGallery from '~/components/LpGallery.vue'
 
 export default {
@@ -24,6 +26,7 @@ export default {
     LpHowto,
     LpMedia,
     LpForm,
+    LpColors,
     LpGallery
   },
   head () {

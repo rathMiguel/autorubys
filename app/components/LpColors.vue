@@ -1,5 +1,5 @@
 <template lang="pug">
-.colors.section
+.colors.section#colors
   .section-header
     h2.title.section-title カラーバリエーション例
     span.section-title__en Colors
@@ -61,6 +61,13 @@ export default {
   padding: 20px;
   @include media(sm){
     padding: 10px;
+  }
+}
+
+.slide-block{
+  &_caption{
+    text-align: center;
+    padding-top: 5px;
   }
 }
 

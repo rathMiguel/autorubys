@@ -8,16 +8,28 @@
       slick(ref="slick" :options="slickOptions")
         .slide-block
           .slide-block_photo: img(src="~assets/images/suzuspo/18270_yellow_black.jpg")
-          .slide-block_caption イエロー×ブラック
+          .slide-block_caption イエロー×マットブラック
         .slide-block
           .slide-block_photo: img(src="~assets/images/suzuspo/18270_white_black.jpg")
-          .slide-block_caption ホワイト×ブラック
+          .slide-block_caption ホワイト×マットブラック
         .slide-block
           .slide-block_photo: img(src="~assets/images/suzuspo/18270_Green_White.jpg")
           .slide-block_caption グリーン×ホワイト
         .slide-block
           .slide-block_photo: img(src="~assets/images/suzuspo/18270_black_White.jpg")
           .slide-block_caption ブラック×ホワイト
+        .slide-block
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_ivory_white.jpg")
+          .slide-block_caption シフォンアイボリー×ホワイト
+        .slide-block
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_ivory_black.jpg")
+          .slide-block_caption シフォンアイボリー×マットブラック
+        .slide-block
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_grey_white.jpg")
+          .slide-block_caption ミディアムグレー×ホワイト
+        .slide-block
+          .slide-block_photo: img(src="~assets/images/suzuspo/18270_grey_black.jpg")
+          .slide-block_caption ミディアムグレー×マットブラック
   .colors-outro
     .container
       p グリルのカラーカスタマイズも承っております。詳しくは
@@ -81,8 +93,8 @@ export default {
   li{
     text-align: center;
     width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     button{
       background-color: #AAA;
       border-radius: 50px;
@@ -97,10 +109,11 @@ export default {
       &:after{
         content: "";
         position: absolute;
-        left: -1px;
+        left: 0;
+        bottom: 0;
         display: block;
-        height: 14px;
-        width: 28px;
+        height: 12.5px;
+        width: 25px;
         background-color: transparent;
         border-radius: 0 0 200px 200px;
       }
@@ -134,6 +147,38 @@ export default {
         background-color: #333;
         &:after{
           background-color: #EFEFEF;
+        }
+      }
+    }
+    &:nth-child(5){
+      button{
+        background-color: #FFEFBF;
+        &:after{
+          background-color: #EFEFEF;
+        }
+      }
+    }
+    &:nth-child(6){
+      button{
+        background-color: #FFEFBF;
+        &:after{
+          background-color: #333;
+        }
+      }
+    }
+    &:nth-child(7){
+      button{
+        background-color: #777;
+        &:after{
+          background-color: #EFEFEF;
+        }
+      }
+    }
+    &:nth-child(8){
+      button{
+        background-color: #777;
+        &:after{
+          background-color: #333;
         }
       }
     }

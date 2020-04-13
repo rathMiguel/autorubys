@@ -6,7 +6,11 @@ div
   main(role="main")
     nuxt
   footer#footer
-    p: small Copyright © Auto Ruby's All Rights Reserved.
+    .copyright
+      p
+        small Copyright ©
+          a(href="/") Auto Ruby's
+          | All Rights Reserved.
 </template>
 
 <style lang="scss" scoped>
@@ -47,11 +51,23 @@ div
   text-align: center;
   padding-top: 6px;
   padding-bottom: 6px;
+}
+
+.copyright{
   small{
     font-size: 13px;
   }
+
   p{
     margin-bottom: 0;
+  }
+
+  a{
+    color: #FFF;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   }
 }
 </style>

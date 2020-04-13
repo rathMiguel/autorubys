@@ -1,5 +1,6 @@
 <template lang="pug">
   div
+    TheBreadcrumb(v-bind:list="breadcrumbs")
     .hero
       .hero_photo
         .hero_text: img(src="~/assets/images/suzuspo/hero_text.svg" width="900")
@@ -18,6 +19,7 @@ import LpMedia from '~/components/LpMedia.vue'
 import LpForm from '~/components/LpForm.vue'
 import LpColors from '~/components/LpColors.vue'
 import LpGallery from '~/components/LpGallery.vue'
+import TheBreadcrumb from '~/components/TheBreadcrumb.vue'
 
 export default {
   layout: 'lpSuzuspo',
@@ -27,13 +29,24 @@ export default {
     LpMedia,
     LpForm,
     LpColors,
-    LpGallery
+    LpGallery,
+    TheBreadcrumb
   },
   head () {
     return {
       title: 'スズスポグリル - あなたのジムニーを可愛く変身させるグリルパーツ',
       meta: [
         { hid: 'description', name: 'description', content: '「ジムニーがカッコ良くあり続けるには、時には"可愛く"なければならない」――――スズスポグリルは、あなたのジムニーをもっと愛したくなる、おしゃれなフロントパーツです。' }
+      ],
+    }
+  },
+  data: function() {
+    return {
+      breadcrumbs: [
+        {
+          title: 'スズスポグリル',
+          link:  ''
+        }
       ]
     }
   }

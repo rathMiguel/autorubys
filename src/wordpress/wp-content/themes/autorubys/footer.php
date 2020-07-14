@@ -21,7 +21,7 @@
           <div class="footer-logo">
             <a href="/"><img src="/images/common/logo_white.svg" alt="株式会社　オートルビーズ" width="270" /></a>
           </div>
-          <h3 class="c-title"><small>株式会社オートルビーズ</small></h3><address><span class="address-text">〒681-0073 鳥取県岩美郡岩美町大字大谷1-1485</span></address></div>
+          <h3 class="c-title"><small>株式会社オートルビーズ</small></h3><address><span class="address-text">〒681-0073 鳥取県岩美郡岩美町大字大谷1485-1</span></address></div>
         <div class="footer-nav">
           <div class="container">
             <ul class="footer-nav_list">

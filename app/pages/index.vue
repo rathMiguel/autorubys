@@ -2,6 +2,8 @@
 div
   HomeHero
   HomeNewsPrimary
+  .banners-top.text-center
+    nuxt-link(to="contact/"): img(src="~/assets/images/home/completecar_bnr3.jpg")
   section.section#ourvision
     .container
       .vision-header
@@ -13,7 +15,30 @@ div
       .vision-footer
         a(href="https://www.goo-net.com/usedcar_shop/1002018/stock.html" target="_blank").c-button.c-button_primary 在庫はこちらから
           small グーネット中古車サイトへ
-  section.section#service.bg-secondary
+  section.section#products.bg-secondary
+    .section-header
+      .section-title 製品情報
+      .section-title_en Products
+    .text-center
+      p オートルビーズが開発した製品を紹介します
+    .section-main
+      .container
+        .product-cards
+          .product-card
+            .product-card_photo: img(src="~/assets/images/home/suzuspo_photo.jpg")
+            .product-card_header
+              h2.title スズスポグリル
+            .product-card_main
+              p 黒単色ならスポーティに、塗り分ければレトロ風味の愛らしさに。ジムニーがスズスポグリル一つで個性的なスタイルに生まれ変わります。
+          .product-card
+            .product-card_photo: img(src="~/assets/images/home/classic_photo.jpg")
+            .product-card_header
+              h2.title クラシック22スタイルグリル
+            .product-card_main
+              p 二代目ジムニー（JA22）風のフロントグリル。<br>古き良きジムニーのスタイルを新しいジムニーに引き継いだ、オートルビーズからの新しい提案です。
+    .section-footer
+      nuxt-link(to="/products/").c-button.c-button_primary2 製品情報を詳しく見る
+  section.section#service
     .section-header
       .section-title サービス内容
       .section-title_en Service
@@ -40,29 +65,6 @@ div
               p 事故などによる鈑金塗装修理<br>パーツ等の塗装施工
         .service-footer
           nuxt-link(to="/service/").c-button.c-button_primary2 サービス内容を詳しく見る
-  section.section#products
-    .section-header
-      .section-title 製品情報
-      .section-title_en Products
-    .text-center
-      p オートルビーズが開発した製品を紹介します
-    .section-main
-      .container
-        .product-cards
-          .product-card
-            .product-card_photo: img(src="~/assets/images/home/suzuspo_photo.jpg")
-            .product-card_header
-              h2.title スズスポグリル
-            .product-card_main
-              p 黒単色ならスポーティに、塗り分ければレトロ風味の愛らしさに。ジムニーがスズスポグリル一つで個性的なスタイルに生まれ変わります。
-          .product-card
-            .product-card_photo: img(src="~/assets/images/home/classic_photo.jpg")
-            .product-card_header
-              h2.title クラシック22スタイルグリル
-            .product-card_main
-              p 二代目ジムニー（JA22）風のフロントグリル。<br>古き良きジムニーのスタイルを新しいジムニーに引き継いだ、オートルビーズからの新しい提案です。
-    .section-footer
-      nuxt-link(to="/products/").c-button.c-button_primary2 製品情報を詳しく見る
   section.section#news.bg-secondary
     .section-header
       .section-title ニュース・お知らせ
@@ -132,6 +134,20 @@ $color-primary: #D70247;
   }
   a{
     color: #111;
+  }
+}
+
+//
+// banners
+//
+
+.banners-top{
+  margin-top: 80px;
+  @include media(sm){
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -223,6 +239,13 @@ $color-primary: #D70247;
   @include media(sm){
     display: block;
   }
+}
+
+.product-banner{
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
 }
 
 .product-card{

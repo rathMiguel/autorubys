@@ -65,6 +65,16 @@ div
               p 事故などによる鈑金塗装修理<br>パーツ等の塗装施工
         .service-footer
           nuxt-link(to="/service/").c-button.c-button_primary2 サービス内容を詳しく見る
+  section.section#gallery
+    .section-header
+      .section-title ギャラリー
+      .section-title_en Instagram Gallery
+    .text-center
+      p 最新のお知らせやキャンペーンもここからチェック！
+    .section-main
+      TheInstagram
+    .section-footer
+      a(href="https://www.instagram.com/autorubys696", target="_blank").c-button.c-button_primary2 さらに見る
   section.section#news.bg-secondary
     .section-header
       .section-title ニュース・お知らせ
@@ -289,12 +299,14 @@ $color-primary: #D70247;
 import HomeHero from '~/components/HomeHero.vue'
 import HomeNewsPrimary from '~/components/HomeNewsPrimary.vue'
 import TheNewsList from '~/components/TheNewsList.vue'
+import TheInstagram from '~/components/TheInstagram.vue'
 
 export default {
   components: {
     HomeHero,
     HomeNewsPrimary,
-    TheNewsList
+    TheNewsList,
+    TheInstagram
   },
   head () {
     return {

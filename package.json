@@ -29,6 +29,8 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
+    "@nuxtjs/google-analytics": "^2.2.2",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -46,11 +48,10 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
     "js-yaml": "^3.13.1",
-    "require-dir": "^1.2.0",
-    "@nuxtjs/google-analytics": "^2.2.2",
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
+    "require-dir": "^1.2.0",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.11"
   }

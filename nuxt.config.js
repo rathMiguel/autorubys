@@ -56,8 +56,28 @@ export default {
     'nuxt-webfontloader',
     '@nuxtjs/sitemap',
     '@nuxtjs/axios',
+    '@nuxtjs/pwa',
     ['@nuxtjs/moment', ['ja']]
   ],
+
+  /*
+  ** PWA settings
+  */
+  workbox: {
+    dev: true
+  },
+  manifest: {
+    name: 'オートルビーズ',
+    short_name: 'オートルビーズ',
+    title: 'オートルビーズ',
+    'og:title': 'オートルビーズ',
+    description: '株式会社オートルビーズはスズキ　ジムニーのカスタムパーツを開発、販売を行っています。また、鳥取県を中心に自動車販売、修理、メンテナンスを行っています。',
+    'og:description': '株式会社オートルビーズはスズキ　ジムニーのカスタムパーツを開発、販売を行っています。また、鳥取県を中心に自動車販売、修理、メンテナンスを行っています。',
+    lang: 'ja',
+    display: "standalone",
+    theme_color: '#ffffff',
+    background_color: '#ffffff'
+  },
 
   sitemap: {
     path: '/sitemap.xml',

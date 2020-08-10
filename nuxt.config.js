@@ -1,4 +1,6 @@
 
+const axios = require('axios')
+
 export default {
   mode: 'universal',
   srcDir: 'app/',
@@ -99,6 +101,22 @@ export default {
      '~/assets/scss/style.scss'
      ]
    },
+
+  generate: {
+    interval: 1000,
+    routes () {
+      return Promise.all([axios.get(`https://www.autorubys.com/news/wp-json/wp/v2/posts?per_page=100&page=1&_embed=1`)]).then((data) => {
+        const posts = data[0]
+        const pages = data[1]
+        return posts.data.map((post) => {
+          return {
+            route: '/news/post/' + post.id,
+            payload: post
+          }
+        })
+      })
+    }
+  },
 
   /*
   ** Build configuration

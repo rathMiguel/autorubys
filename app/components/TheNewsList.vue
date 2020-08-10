@@ -2,7 +2,7 @@
 div
   dl.news-list(v-for="post in posts")
     dt {{ $moment(post.date).format("YYYY.MM.DD") }}
-    dd: a(:href="post.link") {{ post.title.rendered }}
+    dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
 </template>
 
 <script>

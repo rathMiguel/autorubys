@@ -40,7 +40,8 @@ export default {
   */
   plugins: [
     '~/plugins/vue-scrollto',
-    { src: '~/plugins/slick', mode: 'client' }
+    { src: '~/plugins/slick', mode: 'client' },
+    '~/plugins/vee-validate'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -124,6 +125,9 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: [
+      "vee-validate/dist/rules"
+    ],
     extend (config, ctx) {
     }
   }

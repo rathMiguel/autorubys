@@ -1,37 +1,41 @@
 <template lang="pug">
 .contact#form
   .container
-    form(method="post" name="lpform" action="mail.php")
+    ValidationObserver(ref="obs" v-slot="ObserverProps")
       .form-header
         h2.title.title-bar__contact お問い合わせ・ご注文はこちらから
       .form-contain
-        dl.dl-form
-          dt お問い合わせ種類
-          dd
-            select(name="お問い合わせ種類" v-model="formData.type").input-medium
-              option(value="") 選択してください
-              option(value="商品について") 商品について
-              option(value="購入について") 購入について
-              option(value="カスタマイズのご依頼") カスタマイズのご依頼
-              option(value="取付のご依頼") 取付のご依頼
-            .panel__error(v-if="formValidate.type == false") 選択してください
-        dl.dl-form
-          dt お名前
-          dd
-            input(type="text" name="お名前" placeholder="例）山田　太郎" v-model="formData.name").input-medium
-            .panel__error(v-if="formValidate.name == false") お名前を入力してください
-        dl.dl-form
-          dt メールアドレス
-          dd
-            input(type="email" name="email" placeholder="例）info@autorubys.com" v-model="formData.email").input-medium
-            .panel__error(v-if="formValidate.email == false") メールアドレスを入力してください
-        dl.dl-form
-          dt お問い合わせ内容・備考
-          dd
-            textarea(name="お問い合わせ内容・備考" v-model="formData.content").input-full
-            .panel__error(v-if="formValidate.content == false") お問い合わせ内容・備考を入力してください
+        validation-provider(name="お問い合わせ種類" v-slot="{ errors }" rules="required")
+          dl.dl-form
+            dt お問い合わせ種類
+            dd
+              select(name="お問い合わせ種類" v-model="formData.type").input-medium
+                option(value="") 選択してください
+                option(value="商品について") 商品について
+                option(value="購入について") 購入について
+                option(value="カスタマイズのご依頼") カスタマイズのご依頼
+                option(value="取付のご依頼") 取付のご依頼
+              .panel__error {{ errors[0] }}
+        validation-provider(name="名前" v-slot="{ errors }" rules="required")
+          dl.dl-form
+            dt お名前
+            dd
+              input(type="text" name="お名前" placeholder="例）山田　太郎" v-model="formData.name").input-medium
+              .panel__error {{ errors[0] }}
+        validation-provider(name="メールアドレス" v-slot="{ errors }" rules="required|email")
+          dl.dl-form
+            dt メールアドレス
+            dd
+              input(type="email" name="email" placeholder="例）info@autorubys.com" v-model="formData.email").input-medium
+              .panel__error {{ errors[0] }}
+        validation-provider(name="お問い合わせ内容" v-slot="{ errors }" rules="required")
+          dl.dl-form
+            dt お問い合わせ内容・備考
+            dd
+              textarea(name="お問い合わせ内容・備考" v-model="formData.content").input-full
+              .panel__error {{ errors[0] }}
         .form-footer
-          button(type="button" v-on:click="checkForm()").c-button.button-submit 送信する
+          button(type="button" v-on:click="submit" :disabled="ObserverProps.invalid || !ObserverProps.validated").c-button.button-submit 送信する
   .container
     .form-outro
       p こちらからも購入できます
@@ -48,64 +52,50 @@
           name: "",
           email: "",
           content: "",
-        },
-        formValidate: {
-          type: true,
-          name: true,
-          email: true,
-          content: true
         }
       }
     },
     methods: {
-      checkForm: function (e) {
+    submit(){
 
-        if(
-          // 2. 必須項目の登録
-          this.formData.type  == "" ||
-          this.formData.name  == "" ||
-          this.formData.email  == "" ||
-          this.formData.content   == ""
-        ) {
-          // ジャンル
-          if (this.formData.type == '') {
-            this.formValidate.type = false
-          } else {
-            this.formValidate.type = true
-          }
+      const formData  = this.convertJsontoUrlencoded(this.formData)
+      const USER      = 'hashimoto'
+      const PASSWORD  = '2jVM QyKd BlK0 jItt yzEU pbvk'
+      const POSTURL   = 'https://autorubys.com/news/wp-json/contact-form-7/v1/contact-forms/50/feedback/'
+      const THNAKSURL = `/suzuspo/thanks/`
 
-          // ご担当者様名
-          if (this.formData.name == '') {
-            this.formValidate.name = false
-          } else {
-            this.formValidate.name = true
-          }
-
-          // お電話番号
-          if (this.formData.email == '') {
-            this.formValidate.email = false
-          } else {
-            this.formValidate.email = true
-          }
-
-          // 本文
-          if (this.formData.content == '') {
-            this.formValidate.content = false
-          } else {
-            this.formValidate.content = true
-          }
-        } else {
-          // 4. バリデーションが通ったときの登録
-          this.formValidate.type = true
-          this.formValidate.name = true
-          this.formValidate.email = true
-          this.formValidate.content = true
-
-          this.submit()
+      // Base64に変換
+      const TOKEN = window.btoa(`${USER}:${PASSWORD}`)
+      const axiosConfig = {
+        headers: {
+          'Authorization': `Basic ${TOKEN}`,
+          'yourmessage-yourtype': 'application/x-www-form-urlencoded; charset=utf-8'
         }
+      }
+
+      this.submitBlind = true
+      this.$axios
+        .post(POSTURL, formData, axiosConfig)
+        .then(response => {
+          console.log(response)
+          this.responseData = response.data
+          this.submitBlind = true
+          this.$router.push(THNAKSURL)
+        })
+        .catch(error => {
+          console.log(error)
+          this.submitBlind = false
+        })
       },
-      submit(){
-        document.lpform.submit()
+
+      convertJsontoUrlencoded(obj) {
+        let str = [];
+        for (let key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            str.push(encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
+          }
+        }
+        return str.join("&");
       }
     }
   }
@@ -150,6 +140,13 @@
   width: 300px;
   @include media(md-lg){
     width: 400px;
+  }
+
+  &:disabled{
+    background-color: #CCC;
+    &:hover{
+      opacity: 1;
+    }
   }
 }
 
@@ -197,6 +194,10 @@
   font-size: 16px;
   @include media(sm){
     font-size: 14px;
+  }
+
+  &:empty{
+    display: none;
   }
 }
 

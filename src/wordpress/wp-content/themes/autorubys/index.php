@@ -1,4 +1,4 @@
 <?php
-wp_redirect( '/' );
-exit;
+  wp_redirect( '/' );
+  exit;
 ?>

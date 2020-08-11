@@ -1,107 +1,94 @@
 <template lang="pug">
 .contact#form
   .container
-    form(method="post" name="lpform" action="mail.php")
+    ValidationObserver(ref="obs" v-slot="ObserverProps")
       .form-contain
-        dl.dl-form
-          dt お名前
-            span.label-required 必須
-          dd
-            input(type="text" name="お名前" placeholder="例）山田　太郎" v-model="formData.name").input-medium
-            .panel__error(v-if="formValidate.name == false") お名前を入力してください
-        dl.dl-form
-          dt メールアドレス
-            span.label-required 必須
-          dd
-            input(type="email" name="email" placeholder="例）info@autorubys.com" v-model="formData.email").input-medium
-            .panel__error(v-if="formValidate.email == false") メールアドレスを入力してください
-        dl.dl-form
-          dt 電話番号
-            span.label-required 必須
-          dd
-            input(type="tel" name="電話番号" placeholder="例）0857-72-0727" v-model="formData.tel").input-medium
-            .panel__error(v-if="formValidate.tel == false") 電話番号を入力してください
-        dl.dl-form
-          dt お問い合わせ内容
-            span.label-required 必須
-          dd
-            textarea(name="お問い合わせ内容" v-model="formData.content").input-full
-            .panel__error(v-if="formValidate.content == false") お問い合わせ内容を入力してください
+        validation-provider(name="名前" v-slot="{ errors }" rules="required")
+          dl.dl-form
+            dt お名前
+            dd
+              input(type="text" name="お名前" placeholder="例）山田　太郎" v-model="formData.name").input-medium
+              .panel__error {{ errors[0] }}
+        validation-provider(name="メールアドレス" v-slot="{ errors }" rules="required|email")
+          dl.dl-form
+            dt メールアドレス
+            dd
+              input(type="email" name="email" placeholder="例）info@autorubys.com" v-model="formData.email").input-medium
+              .panel__error {{ errors[0] }}
+        validation-provider(name="電話番号" v-slot="{ errors }" rules="required")
+          dl.dl-form
+            dt 電話番号
+              span.label-required 必須
+            dd
+              input(type="tel" name="電話番号" placeholder="例）0857-72-0727" v-model="formData.tel").input-medium
+              .panel__error {{ errors[0] }}
+        validation-provider(name="電話番号" v-slot="{ errors }" rules="required")
+          dl.dl-form
+            dt お問い合わせ内容
+              span.label-required 必須
+            dd
+              textarea(name="お問い合わせ内容" v-model="formData.content").input-full
+              .panel__error {{ errors[0] }}
         .form-footer
-          button(type="button" v-on:click="checkForm()").c-button.button-submit 送信する
+          button(type="button" v-on:click="submit" :disabled="ObserverProps.invalid || !ObserverProps.validated").c-button.button-submit 送信する
 </template>
 
 <script>
-  export default {
-    data(){
-      return {
-        formData: {
-          tel: "",
-          name: "",
-          email: "",
-          content: "",
-        },
-        formValidate: {
-          tel: true,
-          name: true,
-          email: true,
-          content: true
-        }
-      }
-    },
-    methods: {
-      checkForm: function (e) {
-
-        if(
-          // 2. 必須項目の登録
-          this.formData.tel  == "" ||
-          this.formData.name  == "" ||
-          this.formData.email  == "" ||
-          this.formData.content   == ""
-        ) {
-
-          // ご担当者様名
-          if (this.formData.name == '') {
-            this.formValidate.name = false
-          } else {
-            this.formValidate.name = true
-          }
-
-          // メールアドレス
-          if (this.formData.email == '') {
-            this.formValidate.email = false
-          } else {
-            this.formValidate.email = true
-          }
-
-          // メールアドレス
-          if (this.formData.tel == '') {
-            this.formValidate.tel = false
-          } else {
-            this.formValidate.tel = true
-          }
-
-          // 本文
-          if (this.formData.content == '') {
-            this.formValidate.content = false
-          } else {
-            this.formValidate.content = true
-          }
-        } else {
-          // 4. バリデーションが通ったときの登録
-          this.formValidate.tel = true
-          this.formValidate.name = true
-          this.formValidate.email = true
-          this.formValidate.content = true
-
-          this.submit()
-        }
-      },
-      submit(){
-        document.lpform.submit()
+export default {
+  data(){
+    return {
+      formData: {
+        tel: "",
+        name: "",
+        email: "",
+        content: "",
       }
     }
+  },
+  methods: {
+    submit(){
+
+      const formData  = this.convertJsontoUrlencoded(this.formData)
+      const USER      = 'hashimoto'
+      const PASSWORD  = '2jVM QyKd BlK0 jItt yzEU pbvk'
+      const POSTURL   = 'https://autorubys.com/news/wp-json/contact-form-7/v1/contact-forms/47/feedback/'
+      const THNAKSURL = `/contact/thanks/`
+
+      // Base64に変換
+      const TOKEN = window.btoa(`${USER}:${PASSWORD}`)
+      const axiosConfig = {
+        headers: {
+          'Authorization': `Basic ${TOKEN}`,
+          'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+        }
+      }
+
+    this.submitBlind = true
+    this.$axios
+      .post(POSTURL, formData, axiosConfig)
+      .then(response => {
+        console.log(response)
+        this.responseData = response.data
+        this.submitBlind = true
+        this.$router.push(THNAKSURL)
+      })
+      .catch(error => {
+        console.log(error)
+        this.submitBlind = false
+      })
+    },
+
+    convertJsontoUrlencoded(obj) {
+      let str = [];
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          str.push(encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
+        }
+      }
+      return str.join("&");
+    }
   }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -145,6 +132,13 @@
   }
   @include media(md-lg){
     width: 400px;
+  }
+
+  &:disabled{
+    background-color: #CCC;
+    &:hover{
+      opacity: 1;
+    }
   }
 }
 
@@ -192,6 +186,10 @@
   font-size: 16px;
   @include media(sm){
     font-size: 14px;
+  }
+
+  &:empty{
+    display: none;
   }
 }
 

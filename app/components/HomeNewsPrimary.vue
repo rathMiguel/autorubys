@@ -10,9 +10,6 @@ div(v-if="posts.length")
 </template>
 
 <script>
-
-const axios = require('axios')
-
 export default {
   data() {
     return {
@@ -20,7 +17,7 @@ export default {
     }
   },
   mounted(){
-    axios.get('https://autorubys.com/news/wp-json/wp/v2/posts/?per_page=1&categories=8')
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/?per_page=1&categories=8`)
     .then((res) => {
       return this.posts = res.data
     }).catch((e => {

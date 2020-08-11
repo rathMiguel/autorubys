@@ -61,9 +61,9 @@ export default {
     submit(){
 
       const formData  = this.convertJsontoUrlencoded(this.formData)
-      const USER      = 'hashimoto'
-      const PASSWORD  = '2jVM QyKd BlK0 jItt yzEU pbvk'
-      const POSTURL   = 'https://autorubys.com/news/wp-json/contact-form-7/v1/contact-forms/50/feedback/'
+      const USER      = process.env.WPUSER
+      const PASSWORD  = process.env.APPLICATION_PASSWORD
+      const POSTURL   = `${process.env.WP_REST_API_BASE_URL}wp-json/contact-form-7/v1/contact-forms/50/feedback/`
       const THNAKSURL = `/suzuspo/thanks/`
 
       // Base64に変換

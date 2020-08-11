@@ -61,7 +61,7 @@ export default {
     }
   },
   async asyncData ({ $axios, params }) {
-    return await $axios.get(`https://www.autorubys.com/news/wp-json/wp/v2/posts/${params.id}`)
+    return await $axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/${params.id}`)
     .then(response => {
       return {
         post: response.data,

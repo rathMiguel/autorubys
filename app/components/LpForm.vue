@@ -36,6 +36,7 @@
               .panel__error {{ errors[0] }}
         .form-footer
           button(type="button" v-on:click="submit" :disabled="ObserverProps.invalid || !ObserverProps.validated").c-button.button-submit 送信する
+          //- p {{ formData }}
   .container
     .form-outro
       p こちらからも購入できます
@@ -44,18 +45,19 @@
 </template>
 
 <script>
-  export default {
-    data(){
-      return {
-        formData: {
-          type: "",
-          name: "",
-          email: "",
-          content: "",
-        }
+
+export default {
+  data(){
+    return {
+      formData: {
+        type: "",
+        name: "",
+        email: "",
+        content: "",
       }
-    },
-    methods: {
+    }
+  },
+  methods: {
     submit(){
 
       const formData  = this.convertJsontoUrlencoded(this.formData)
@@ -69,36 +71,37 @@
       const axiosConfig = {
         headers: {
           'Authorization': `Basic ${TOKEN}`,
-          'yourmessage-yourtype': 'application/x-www-form-urlencoded; charset=utf-8'
+          'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
         }
       }
 
-      this.submitBlind = true
-      this.$axios
-        .post(POSTURL, formData, axiosConfig)
-        .then(response => {
-          console.log(response)
-          this.responseData = response.data
-          this.submitBlind = true
-          this.$router.push(THNAKSURL)
-        })
-        .catch(error => {
-          console.log(error)
-          this.submitBlind = false
-        })
-      },
+    this.submitBlind = true
+    this.$axios
+      .post(POSTURL, formData, axiosConfig)
+      .then(response => {
+        console.log(response)
+        this.responseData = response.data
+        this.submitBlind = true
+        this.$router.push(THNAKSURL)
+      })
+      .catch(error => {
+        console.log(error)
+        this.submitBlind = false
+      })
+    },
 
-      convertJsontoUrlencoded(obj) {
-        let str = [];
-        for (let key in obj) {
-          if (obj.hasOwnProperty(key)) {
-            str.push(encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
-          }
+    convertJsontoUrlencoded(obj) {
+      let str = [];
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          str.push(encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
         }
-        return str.join("&");
       }
+      return str.join("&");
     }
+
   }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -24,7 +24,7 @@
             dd
               input(type="tel" name="電話番号" placeholder="例）0857-72-0727" v-model="formData.tel").input-medium
               .panel__error {{ errors[0] }}
-        validation-provider(name="電話番号" v-slot="{ errors }" rules="required")
+        validation-provider(name="お問い合わせ内容" v-slot="{ errors }" rules="required")
           dl.dl-form
             dt お問い合わせ内容
               span.label-required 必須

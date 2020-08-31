@@ -40,7 +40,6 @@
               .panel__error {{ errors[0] }}
         .form-footer
           button(type="button" v-on:click="submit" :disabled="ObserverProps.invalid || !ObserverProps.validated").c-button.button-submit 送信する
-          //- p {{ formData }}
   .container
     .form-outro
       p こちらからも購入できます

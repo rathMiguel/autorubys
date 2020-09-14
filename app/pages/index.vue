@@ -75,7 +75,7 @@ div
       TheInstagram
     .section-footer
       a(href="https://www.instagram.com/autorubys696", target="_blank").c-button.c-button_primary2 さらに見る
-  section.section#news.bg-secondary
+  section.section#news
     .section-header
       .section-title ニュース・お知らせ
       .section-title_en News

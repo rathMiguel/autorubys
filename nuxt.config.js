@@ -2,7 +2,6 @@
 const axios = require('axios')
 
 export default {
-  mode: 'universal',
   srcDir: 'app/',
   /*
   ** Headers of the page
@@ -68,7 +67,7 @@ export default {
   ** PWA settings
   */
   workbox: {
-    dev: true
+    dev: false
   },
 
   manifest: {

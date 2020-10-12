@@ -47,7 +47,7 @@ export default {
     }
   },
   mounted(){
-    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/?per_page=5&categories_exclude=8`)
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/?per_page=5&categories=1,2,3`)
     .then((res) => {
       return this.postsAll = res.data
     }).catch((e => {

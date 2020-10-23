@@ -6,7 +6,7 @@ div(v-if="posts.length")
         h3.news-title お知らせ
         dl.news-dl(v-for="post in posts")
           dt {{ $moment(post.date).format("YYYY.MM.DD") }}
-          dd {{ post.title.rendered }}
+          dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
 </template>
 
 <script>
@@ -40,6 +40,10 @@ export default {
   }
   a{
     color: #FFF;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 

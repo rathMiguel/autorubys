@@ -131,6 +131,7 @@ export default {
 }
 
 // controls
+
 .control-close{
   background-image: url('~assets/images/common/times-solid-w.svg');
   background-repeat: no-repeat;
@@ -182,7 +183,7 @@ export default {
     left: -80px;
   }
   &:hover{
-    transform: translateX(-3px);
+    transform: translateX(-2px);
     background-color: lighten($color-secondary, 10);
     cursor: pointer;
   }
@@ -195,7 +196,7 @@ export default {
     right: -80px;
   }
   &:hover{
-    transform: translateX(3px);
+    transform: translateX(2px);
     background-color: lighten($color-secondary, 10);
     cursor: pointer;
   }

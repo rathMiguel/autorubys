@@ -3,6 +3,7 @@ const axios = require('axios')
 
 export default {
   srcDir: 'app/',
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -40,7 +41,8 @@ export default {
   plugins: [
     '~/plugins/vue-scrollto',
     { src: '~/plugins/slick', mode: 'client' },
-    '~/plugins/vee-validate'
+    '~/plugins/vee-validate',
+    '~/plugins/filter.js'
   ],
   /*
   ** Nuxt.js dev-modules

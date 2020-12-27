@@ -22,7 +22,7 @@ header#header
         .header-main_nav(v-bind:class="(isActive === true) ? 'is-active' : ''")
           ul.header-main_list
             li: nuxt-link(to='/service/') サービス案内
-            li: nuxt-link(to='/products/') 製品情報
+            li: nuxt-link(to='/products/') 製品カタログ
             li: nuxt-link(to='/access/') 交通アクセス
             li: nuxt-link(to='/company/') 会社概要
             li: nuxt-link(to='/contact/') お問い合わせ

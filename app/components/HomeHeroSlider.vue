@@ -1,9 +1,9 @@
 <template lang="pug">
 #hero
   slick(ref="slick" :options="slickOptions")
-    .slide-block: img(src="http://placehold.jp/1000x500.png" alt="")
-    .slide-block: img(src="http://placehold.jp/1000x500.png" alt="")
-    .slide-block: img(src="http://placehold.jp/1000x500.png" alt="")
+    .slide-block: nuxt-link(to="/products/"): img(src="~assets/images/home/slide_2.jpg" alt="")
+    .slide-block: nuxt-link(to="/contact/"): img(src="~assets/images/home/slide_3.jpg" alt="")
+    .slide-block: img(src="~assets/images/home/slide_1.jpg" alt="")
 </template>
 
 <script>
@@ -17,7 +17,8 @@ export default {
         variableWidth: true,
         centerMode: true,
         autoplay: true,
-        infinite: true
+        infinite: true,
+        controls: true
       }
     }
   }
@@ -66,5 +67,22 @@ export default {
 
 /deep/ .slick-slide{
   outline: none;
+}
+
+/deep/ .slick-slider{
+  .slick-arrow{
+    height: 80px;
+    width: 80px;
+    z-index: 100;
+    &:before{
+      opacity: 0;
+    }
+    &.slick-next{
+      right: 40px;
+    }
+    &.slick-prev{
+      left: 40px;
+    }
+  }
 }
 </style>

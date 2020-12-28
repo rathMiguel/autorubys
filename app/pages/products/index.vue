@@ -3,7 +3,7 @@ div
   TheBreadcrumb(v-bind:list="breadcrumbs")
   ThePagetitle(:title="title", :title_en="title_en")
   .page-main.page-main--catalog
-    section.section
+    .section
       .container.container--catalog
         .sidebar
           .sidebar-nav
@@ -16,10 +16,13 @@ div
 </template>
 
 <style lang="scss" scoped>
-.container--catalog{
-  max-width: 1200px;
-  @include media(md-lg){
-    display: flex;
+
+.container{
+  &--catalog{
+    max-width: 1200px;
+    @include media(md-lg){
+      display: flex;
+    }
   }
 }
 

@@ -68,4 +68,36 @@
       color: #FFF;
     }
   }
+
+  &-xl{
+    @include media(md-lg){
+      height: 80px;
+      width: 50%;
+    }
+  }
+
+  &-xxl{
+    @include media(md-lg){
+      width: 80%;
+      height: 80px;
+    }
+  }
+
+  &-instagram{
+    background-image: url('~assets/images/common/bg_instagram.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-direction: row;
+    &:before{
+      content: "";
+      display: inline-block;
+      background-image: url('~assets/images/common/instagram-brands-w.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
 }

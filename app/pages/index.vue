@@ -17,8 +17,8 @@ div
           small グーネット中古車サイトへ
   section.section#products.bg-secondary
     .section-header
-      .section-title 製品情報
-      .section-title_en Products
+      .section-title 製品カタログ
+      .section-title_en Catalog
     .text-center
       p オートルビーズが開発した製品を紹介します
     .section-main
@@ -74,7 +74,9 @@ div
     .section-main
       TheInstagram
     .section-footer
-      a(href="https://www.instagram.com/autorubys696", target="_blank").c-button.c-button_primary2 さらに見る
+      a(href="https://www.instagram.com/autorubys696", target="_blank").c-button.c-button_primary2.c-button-xl.c-button-instagram
+        i.icon.icon-instagram
+        |Instagramで見る
   section.section#news
     .section-header
       .section-title ニュース・お知らせ

@@ -2,8 +2,6 @@
 div
   HomeHeroSlider
   HomeNewsPrimary
-  .banners-top.text-center
-    nuxt-link(to="contact/"): img(src="~/assets/images/home/completecar_bnr3.jpg")
   section.section#ourvision
     .container
       .vision-header

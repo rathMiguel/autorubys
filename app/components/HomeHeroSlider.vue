@@ -28,8 +28,7 @@ export default {
 <style lang="scss" scoped>
 #hero{
   padding-bottom: 20px;
-  padding-top: 20px;
-  // background-color: #666;
+  padding-top: 20px0;
   background-image: url('~assets/images/home/bg_linen.jpg');
   border-bottom: 1px solid #666;
   overflow: hidden;
@@ -65,6 +64,10 @@ export default {
   }
 }
 
+//
+// slick
+//
+
 /deep/ .slick-slide{
   outline: none;
 }
@@ -74,14 +77,35 @@ export default {
     height: 80px;
     width: 80px;
     z-index: 100;
+    background-color: rgba(#000, 0.4);
+    @include media(sm){
+      height: 40px;
+      width: 40px;
+    }
     &:before{
       opacity: 0;
     }
     &.slick-next{
       right: 40px;
+      background-image: url('~assets/images/common/chevron-right-solid-w.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      @include media(sm){
+        right: 0;
+        background-size: 10px;
+      }
     }
     &.slick-prev{
       left: 40px;
+      background-image: url('~assets/images/common/chevron-left-solid-w.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      @include media(sm){
+        left: 0;
+        background-size: 10px;
+      }
     }
   }
 }

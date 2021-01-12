@@ -15,7 +15,8 @@ function create_post_type() {
       'public' => true,
       'show_in_rest' => true,
       'rest_base' => 'products',
-      'menu_position' => 5
+      'menu_position' => 5,
+      'publicly_queryable' => false
     )
   );
 }

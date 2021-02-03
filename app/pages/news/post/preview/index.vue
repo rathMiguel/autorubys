@@ -48,7 +48,7 @@ export default {
   },
   head () {
     return {
-      title: this.post.title.rendered
+      title: this.post.title
     }
   },
   data: function() {
@@ -77,6 +77,8 @@ export default {
           }
         ]
       }
+    }).catch(err => {
+      // console.log('err:', err)
     })
   }
 }

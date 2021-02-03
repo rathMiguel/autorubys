@@ -3,6 +3,7 @@ const axios = require('axios')
 
 export default {
   srcDir: 'app/',
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -111,13 +112,17 @@ export default {
    },
 
   generate: {
-    interval: 1000,
+    fallback : true,
+    interval: 100,
     routes () {
-      return Promise.all([axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts?per_page=100`)]).then((data) => {
+      return Promise.all([
+        axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts?per_page=100`)
+      ])
+      .then((data) => {
         const posts = data[0]
         return posts.data.map((post) => {
           return {
-            route: '/news/post/' + post.id,
+            route: `/news/post/${post.id}`,
             payload: post
           }
         })

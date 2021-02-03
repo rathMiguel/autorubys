@@ -60,26 +60,13 @@ export default {
       breadcrumbs: null
     }
   },
-  async asyncData ({ $axios, query }) {
-    return await $axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/custom/v0/post/preview/${query.id}`)
-    .then(response => {
-      return {
-        post: response.data,
-        pagetitle: '',
-        breadcrumbs: [
-            {
-              title: 'ニュース・お知らせ',
-              link:  '/'
-            },
-          {
-            title: response.data.title,
-            link:  ''
-          }
-        ]
-      }
-    }).catch(err => {
-      // console.log('err:', err)
-    })
+  mounted(){
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/custom/v0/post/preview/${this.$route.query.id}`)
+    .then((res) => {
+      return this.post = res.data
+    }).catch((e => {
+      error({ searchPosts: e.response.status, message: e.message })
+    }))
   }
 }
 </script>

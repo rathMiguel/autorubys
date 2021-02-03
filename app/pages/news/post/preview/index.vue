@@ -57,7 +57,12 @@ export default {
       pagetitle: null,
       title_en: 'News',
       post: {},
-      breadcrumbs: null
+      breadcrumbs: [
+        {
+          title: "ニュース・お知らせ",
+          link: "/news/"
+        }
+      ]
     }
   },
   mounted(){

@@ -13,8 +13,8 @@
               li スズキ ジムニー / ジムニー・シエラ
               li 年式：2018年7月～
               li 型式：JB64W / JB74W
-        span.price 33,800
-          span.price-unit 円（税別）
+        span.price 39,800
+          span.price-unit 円（税込 43,780円）
         .info__footer
           nuxt-link(v-scroll-to="'#form'" to).c-button.button-info お問い合わせ・ご注文
 </template>

@@ -16,7 +16,7 @@ div
           .price-main(v-if="post.acf.price")
             span.price {{post.acf.price | addComma }}
             |円
-            small （税別）
+            small （税込 {{ post.acf.price * 1.1 | addComma }}円）
           .product-option(v-if="post.acf.options")
             h3.c-title.title-option 追加オプション
             table.c-table.product-table
@@ -24,7 +24,8 @@ div
                 tr(v-for="option in post.acf.options")
                   td {{ option.option_group.option_name }}
                   td +{{ option.option_group.option_price | addComma }}円
-            .product-table__caption
+                    small （税込{{ option.option_group.option_price * 1.1 | addComma }}円）
+            // .product-table__caption
               p: small 価格は全て税抜です。
           .product-buttons
             ul.product-buttons__list
@@ -120,11 +121,17 @@ div
 
 .product-table{
   width: 100%;
+  margin-bottom: 1.5em;
   tr{
     border-bottom: 1px solid #DDD;
   }
   th, td{
     padding: 14px 20px;
+  }
+
+  small{
+    font-size: 0.8em;
+    display: inline-block;
   }
 
   &__caption{

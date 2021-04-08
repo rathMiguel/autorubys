@@ -12,7 +12,7 @@
             img(:src="post.acf.photo.url" :alt="post.title.rendered")
           h3.title.item-title {{ post.title.rendered }}
           span.price {{ post.acf.price | addComma }}円
-            small （税抜）
+            small （税込 {{ post.acf.price * 1.1 | addComma }}円）
 </template>
 
 <style lang="scss" scoped>

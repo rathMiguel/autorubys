@@ -64,6 +64,9 @@ div
           tr
             th 2021年1月
             td 東京オートサロン2021に出展
+          tr
+            th 2021年4月
+            td 静岡県富士宮市にオートルビーズブランチストアをオープン
 </template>
 
 <style lang="scss" scoped>

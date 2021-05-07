@@ -61,6 +61,9 @@ div
           tr
             th 2020年2月
             td ＷＩＬＤ　ＲＵＢＹ’Ｓ　ブランドで大阪オートメッセ2020に出展
+          tr
+            th 2021年1月
+            td 東京オートサロン2021に出展
 </template>
 
 <style lang="scss" scoped>

@@ -15,7 +15,7 @@ div
             small 受付時間は
               nuxt-link(to="/access/#worktime") 営業時間
               |をご参照ください<br>
-    section.section.page-section.bg-secondary
+    section.section.page-section.bg-secondary#contact-form
       .container.container-single
         .section-header
           h2.c-title_info メールフォームでのお問い合わせ

@@ -17,8 +17,8 @@ div
           small グーネット中古車サイトへ
   section.section#products.bg-secondary
     .section-header
-      .section-title 製品情報
-      .section-title_en Products
+      .section-title 製品カタログ
+      .section-title_en Catalog
     .text-center
       p オートルビーズが開発した製品を紹介します
     .section-main

@@ -23,11 +23,6 @@ function add_my_endpoints() {
     'methods'  =>  WP_REST_Server::READABLE
   ]);
 
-  register_rest_route('custom/v0', '/post/preview/(?P<id>\d+)', [
-    'callback' => 'fetch_post_preview_data',
-    'permission_callback' => '__return_true',
-    'methods'  =>  WP_REST_Server::READABLE
-  ]);
 }
 add_action('rest_api_init', 'add_my_endpoints');
 

@@ -102,13 +102,18 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['M+PLUS+Rounded+1c:400,700&display=swap']
+      families: [
+        'Teko',
+        'Yellowtail',
+        'Bebas Neue'
+      ]
     }
   },
 
   styleResources: {
     scss: [
-     '~/assets/scss/style.scss'
+     '~/assets/scss/_settings.scss',
+     '~/assets/scss/_mixins.scss'
      ]
    },
 

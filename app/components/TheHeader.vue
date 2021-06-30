@@ -1,7 +1,7 @@
 <template lang="pug">
 header#header
   .header-top
-    .container
+    .container.header-container
       .header-top_wrap
         .header-top_catch
           p 車のことならオートルビーズにお任せください
@@ -15,17 +15,19 @@ header#header
       span
       span
   .header-main
-    .container
+    .container.header-container
       .header-main_wrap
         .header-main_logo
           nuxt-link(to="/"): img(src="~/assets/images/common/logo.svg" alt="株式会社　オートルビーズ" width=300)
         .header-main_nav(v-bind:class="(isActive === true) ? 'is-active' : ''")
-          ul.header-main_list
-            li: nuxt-link(to='/service/') サービス案内
-            li: nuxt-link(to='/products/') 製品カタログ
-            li: nuxt-link(to='/access/') 交通アクセス
-            li: nuxt-link(to='/company/') 会社概要
-            li: nuxt-link(to='/contact/') お問い合わせ
+          nav#nav
+            ul.header-main_list
+              li: nuxt-link(to='/service/') サービス案内
+              li: nuxt-link(to='/products/') 製品カタログ
+              li: nuxt-link(to='/access/') 交通アクセス
+              li: nuxt-link(to='/company/') 会社概要
+              li: nuxt-link(to='/branchstore/') ブランチストア
+              li: nuxt-link(to='/contact/') お問い合わせ
 </template>
 
 <script>
@@ -52,6 +54,10 @@ export default {
 
 #header{
   border-bottom: 2px solid $color-secondary;
+}
+
+.header-container{
+  max-width: 1280px;
 }
 
 .header-top{
@@ -139,6 +145,12 @@ export default {
     }
     @include media(lg){
       margin-left: auto;
+      font-size: 14px;
+    }
+    @include media(md-lg){
+      height: 65px;
+      display: flex;
+      align-items: center;
     }
     @include media(sm){
       position: absolute;
@@ -163,7 +175,7 @@ export default {
     }
     li{
       @include media(md-lg){
-        margin-left: 2em;
+        margin-left: 2.5em;
       }
       &:last-child{
         @include media(sm){

@@ -1,9 +1,7 @@
 <template lang="pug">
 div
-  HomeHero
+  HomeHeroSlider
   HomeNewsPrimary
-  .banners-top.text-center
-    nuxt-link(to="contact/"): img(src="~/assets/images/home/completecar_bnr3.jpg")
   section.section#ourvision
     .container
       .vision-header
@@ -298,14 +296,14 @@ $color-primary: #D70247;
 
 <script>
 
-import HomeHero from '~/components/HomeHero.vue'
+import HomeHeroSlider from '~/components/HomeHeroSlider.vue'
 import HomeNewsPrimary from '~/components/HomeNewsPrimary.vue'
 import TheNewsList from '~/components/TheNewsList.vue'
 import TheInstagram from '~/components/TheInstagram.vue'
 
 export default {
   components: {
-    HomeHero,
+    HomeHeroSlider,
     HomeNewsPrimary,
     TheNewsList,
     TheInstagram

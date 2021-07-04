@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       posts: {
-        business_discovery: {
+        business_discorvey: {
           media: {
             data: null
           }

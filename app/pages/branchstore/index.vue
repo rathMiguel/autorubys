@@ -104,6 +104,7 @@
                   |FAX：0544-26-5753
                 ul.list-social.list-social--circle
                   li: a(href="https://www.instagram.com/autorubysbranchstore/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
+                  li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/18-youtube.svg" alt="Instagram" width=24)
 </template>
 
 <script>
@@ -597,6 +598,7 @@ export default {
     @include media(sm){
       height: 200px;
     }
+    
     .gallery-block{
 
     }
@@ -697,6 +699,7 @@ $galleryImages:
   &--circle{
     li{
       display: inline-block;
+      margin-right: 10px;
       a{
         background-color: #000;
         border-radius: 100%;

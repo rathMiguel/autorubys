@@ -18,6 +18,10 @@
           header.topics-header
             h2.title.topics-header__title Topics
           BranchNews
+          footer.topics-footer
+            a(href="https://www.instagram.com/autorubysbranchstore/", target="_blank").c-button.c-button_primary2.c-button-lg.c-button-instagram
+              i.icon.icon-instagram
+              |Instagramで見る
     section#intro
       .intro-bg
         .container
@@ -282,6 +286,11 @@ export default {
       font-size: 2.2em;
     }
   }
+}
+
+.topics-footer{
+  text-align: center;
+  margin-top: 2em;
 }
 
 //

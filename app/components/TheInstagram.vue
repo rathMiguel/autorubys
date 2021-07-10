@@ -2,7 +2,7 @@
 div
   //- pre
     p {{ posts }}
-  //- template(v-if="posts")
+  template(v-if="posts")
     .media-loop
       template(v-for="(post, index) in posts.business_discovery.media.data", v-if="index < 8")
         span.media-block(v-on:click="popupOpen(index)")

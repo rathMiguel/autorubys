@@ -7,7 +7,10 @@
         li: nuxt-link(v-scroll-to="'#access'" to) 交通アクセス
     .hero
       .hero__logo: img(src="~/assets/images/branch/hero_catch.svg" alt="ブランチストア OPEN!!")
-      .hero__scroll
+      .hero__cta
+        span.hero-text--youtube: img(src="~/assets/images/branch/hero_youtube_text.svg" alt="オートルビーズブランチストア公式YouTube ジムニーの魅力を配信中！")
+        a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank").hero-link--youtube: img(src="~/assets/images/branch/hero_youtube_btn.svg" alt="")
+      //- .hero__scroll
         nuxt-link(v-scroll-to="`#scrolldown`" to)
           span.scroll-text scroll
           i.scroll-down: img(src="~/assets/images/branch/down.svg" alt="")
@@ -188,11 +191,12 @@ export default {
   background-size: cover;
   background-position: center center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   @include media(sm){
-    height: 300px;
+    height: 330px;
   }
   @include media(md-lg){
     height: 800px;
@@ -200,7 +204,7 @@ export default {
 
   &__logo{
     @include media(sm){
-      width: 250px;
+      width: 200px;
     }
     @include media(lg){
       width: 600px;
@@ -208,6 +212,10 @@ export default {
         width: 100%;
       }
     }
+  }
+
+  &__cta{
+    
   }
 
   &__scroll{
@@ -220,6 +228,7 @@ export default {
     @include media(sm){
       margin-left: -18px;
       bottom: 10px;
+      display: none;
     }
     a{
       color: #FFF;
@@ -241,6 +250,40 @@ export default {
     width: 70px;
     @include media(sm){
       width: 36px;
+    }
+  }
+}
+
+.hero-text{
+  &--youtube{
+    display: block;
+    margin-top: 1em;
+    @include media(sm){
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include media(lg){
+      margin-top: 2em;
+      img{
+        width: 350px;
+      }
+    }
+  }
+}
+
+.hero-link{
+  &--youtube{
+    margin-top: 1em;
+    display: block;
+    @include media(sm){
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include media(lg){
+      margin-top: 2em;
+      text-align: center;
     }
   }
 }

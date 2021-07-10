@@ -1,24 +1,25 @@
 <template lang="pug">
 div
   //- pre
-    p {{ number }}
-  .media-loop
-    template(v-for="(post, index) in posts.business_discovery.media.data", v-if="index < 8")
-      span.media-block(v-on:click="popupOpen(index)")
-        .media-block__photo(:style="{ backgroundImage: 'url(' + post.media_url + ')' }")
-    .popup-layer(v-if="trigger")
-      .popup-wrap(v-on:click.self="popupClose")
-        .popup-panel
-          .popup-controls
-            i.control-close(v-on:click="popupClose")
-            i.control-left(v-on:click="popupNumberDecrement" v-if="number > 0")
-            i.control-right(v-on:click="popupNumberIncrement" v-if="number < 8")
-          .popup-panel__wrap
-            .popup-panel__photo(:style='{ backgroundImage: `url(${posts.business_discovery.media.data[number].media_url})` }')
-            .popup-panel__contents
-              p(v-text=`posts.business_discovery.media.data[number].caption`)
-            .popup-panel__footer
-              a(:href=`posts.business_discovery.media.data[number].permalink`, target="_blank") 詳しく見る
+    p {{ posts }}
+  //- template(v-if="posts")
+    .media-loop
+      template(v-for="(post, index) in posts.business_discovery.media.data", v-if="index < 8")
+        span.media-block(v-on:click="popupOpen(index)")
+          .media-block__photo(:style="{ backgroundImage: 'url(' + post.media_url + ')' }")
+      .popup-layer(v-if="trigger")
+        .popup-wrap(v-on:click.self="popupClose")
+          .popup-panel
+            .popup-controls
+              i.control-close(v-on:click="popupClose")
+              i.control-left(v-on:click="popupNumberDecrement" v-if="number > 0")
+              i.control-right(v-on:click="popupNumberIncrement" v-if="number < 8")
+            .popup-panel__wrap
+              .popup-panel__photo(:style='{ backgroundImage: `url(${posts.business_discovery.media.data[number].media_url})` }')
+              .popup-panel__contents
+                p(v-text=`posts.business_discovery.media.data[number].caption`)
+              .popup-panel__footer
+                a(:href=`posts.business_discovery.media.data[number].permalink`, target="_blank") 詳しく見る
 </template>
 
 <script>
@@ -26,13 +27,7 @@ div
 export default {
   data() {
     return {
-      posts: {
-        business_discorvey: {
-          media: {
-            data: null
-          }
-        }
-      },
+      posts: {},
       trigger: false,
       number: 0
     }

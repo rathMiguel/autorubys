@@ -27,7 +27,13 @@ div
 export default {
   data() {
     return {
-      posts: {},
+      posts: {
+        business_discovery: {
+          media: {
+            data: []
+          }
+        }
+      },
       trigger: false,
       number: 0
     }

@@ -140,17 +140,18 @@ export default {
   }
 
   &_nav{
-    @include media(md){
-      margin-bottom: 10px;
+    @include media(md-lg){
+      height: 65px;
+      display: flex;
+      align-items: center;
     }
     @include media(lg){
       margin-left: auto;
       font-size: 14px;
     }
-    @include media(md-lg){
-      height: 65px;
-      display: flex;
-      align-items: center;
+    @include media(md){
+      margin-bottom: 10px;
+      width: 100%;
     }
     @include media(sm){
       position: absolute;
@@ -160,6 +161,9 @@ export default {
       width: 100%;
       background-color: $color-secondary;
       display: none;
+    }
+    nav{
+      width: 100%;
     }
     &.is-active{
       @include media(sm){
@@ -173,9 +177,15 @@ export default {
     @include media(sm){
       flex-direction: column;
     }
+    @include media(md){
+      justify-content: space-between;
+    }
     li{
-      @include media(md-lg){
-        margin-left: 2.5em;
+      @include media(lg){
+        margin-left: 2em;
+      }
+      @include media(md){
+        font-size: 14px;
       }
       &:last-child{
         @include media(sm){

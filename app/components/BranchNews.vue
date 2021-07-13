@@ -28,7 +28,7 @@ export default {
       posts: {
         business_discovery: {
           media: {
-            data: null
+            data: []
           }
         }
       },

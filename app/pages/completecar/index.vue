@@ -40,6 +40,7 @@ div
                 - i++
     section.section.section-page
       .container
+        h2.c-title_info 購入までの流れ
         h3.c-title.c-title_secondary 1. ベース車両、及びカスタム内容の決定
         p まずはメールまたはお電話で、お気軽にお問い合わせください。
         h3.c-title.c-title_secondary 2. 売買契約の締結

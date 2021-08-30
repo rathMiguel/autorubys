@@ -3,7 +3,7 @@ div
   .car-gallery
     - let i = 1;
     while i <= 10
-      .car-gallery__block(v-on:click="popupOpen(index)"): img(src="http://placehold.jp/16/b3b3b3/000000/200x200.png?text=%E3%83%91%E3%83%BC%E3%83%84%E5%86%99%E7%9C%9F%0A" alt="")
+      .car-gallery__block(v-on:click="popupOpen(index)"): img(src="https://placehold.jp/16/b3b3b3/000000/200x200.png?text=%E3%83%91%E3%83%BC%E3%83%84%E5%86%99%E7%9C%9F%0A" alt="")
       - i++
   .popup-layer(v-if="trigger" v-on:click="popupClose()")
     .popup-wrap
@@ -13,7 +13,7 @@ div
           //- i.control-left(v-on:click="popupNumberDecrement" v-if="number > 0")
           //- i.control-right(v-on:click="popupNumberIncrement" v-if="number < 8")
         .popup-panel__wrap
-          .popup-panel__photo: img(src="http://placehold.jp/16/b3b3b3/000000/400x200.png?text=%E3%83%91%E3%83%BC%E3%83%84%E5%86%99%E7%9C%9F%0A" alt="")
+          .popup-panel__photo: img(src="https://placehold.jp/16/b3b3b3/000000/400x200.png?text=%E3%83%91%E3%83%BC%E3%83%84%E5%86%99%E7%9C%9F%0A" alt="")
           .popup-panel__contents
             h3.popup-panel__title パーツ名
             p こちらに簡単な説明、アピールポイントが入ります。

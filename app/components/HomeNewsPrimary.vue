@@ -4,9 +4,14 @@ div(v-if="posts.length")
     .container
       .news-wrap
         h3.news-title お知らせ
-        dl.news-dl(v-for="post in posts")
-          dt {{ $moment(post.date).format("YYYY.MM.DD") }}
-          dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
+        .news-content
+          template(v-if="postsSticky" v-for="post, index in postsSticky")
+            dl.news-dl(v-if="index <= 0")
+              dt {{ $moment(post.date).format("YYYY.MM.DD") }}
+              dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
+          dl.news-dl(v-for="post in posts")
+            dt {{ $moment(post.date).format("YYYY.MM.DD") }}
+            dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
 </template>
 
 <script>
@@ -14,12 +19,20 @@ export default {
   data() {
     return {
       posts: [],
+      postsSticky: []
     }
   },
   mounted(){
-    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/?per_page=1&categories=8`)
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/?per_page=1&categories=8&sticky=false`)
     .then((res) => {
       return this.posts = res.data
+    }).catch((e => {
+      error({ searchPosts: e.response.status, message: e.message })
+    }))
+
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/posts/?per_page=1&categories=8&sticky=true`)
+    .then((res) => {
+      return this.postsSticky = res.data
     }).catch((e => {
       error({ searchPosts: e.response.status, message: e.message })
     }))
@@ -31,12 +44,10 @@ export default {
 #news{
   background-color: $color-black;
   color: #FFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
   @include media(lg){
     font-size: 16px;
-  }
-  @include media(sm){
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
   a{
     color: #FFF;

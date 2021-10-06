@@ -11,7 +11,10 @@ div
         .single-content(v-html="this.post.content.rendered")
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+@import '~assets/scss/style.scss';
+
 .single-header{
   margin-bottom: 1.6em;
   text-align: center;
@@ -27,6 +30,30 @@ div
   margin-bottom: 40px;
   @include media(md-lg){
     margin-bottom: 80px;
+  }
+
+  h2{
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: 1.75em;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 5px;
+    border-bottom: 3px solid #CCC;
+    text-align: left;
+    position: relative;
+    color: #D70247;
+    &:before{
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 7em;
+      background-color: #D70247;
+      margin-bottom: -3px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 

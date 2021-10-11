@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-  HomeHeroSlider
   HomeNewsPrimary
+  HomeHeroSlider
   section.section#ourvision
     .container
       .vision-header

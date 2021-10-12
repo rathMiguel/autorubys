@@ -22,7 +22,7 @@
             h2.title.topics-header__title Topics
           BranchNews
           footer.topics-footer
-            a(href="https://www.instagram.com/autorubysbranchstore/", target="_blank").c-button.c-button_primary2.c-button-lg.c-button-instagram
+            a(href="https://www.instagram.com/autorubysbranchstore1805/", target="_blank").c-button.c-button_primary2.c-button-lg.c-button-instagram
               i.icon.icon-instagram
               |Instagramで見る
     section#intro
@@ -110,7 +110,7 @@
                   a(href="tel:0544265508").tel 0544-26-5508　
                   |FAX：0544-26-5753
                 ul.list-social.list-social--circle
-                  li: a(href="https://www.instagram.com/autorubysbranchstore/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
+                  li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
                   li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/18-youtube.svg" alt="Instagram" width=24)
 </template>
 

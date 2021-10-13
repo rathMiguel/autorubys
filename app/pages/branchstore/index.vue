@@ -108,7 +108,7 @@
                 p 静岡県富士宮市小泉1805-1
                 p TEL：
                   a(href="tel:0544265508").tel 0544-26-5508　
-                  |FAX：0544-26-5753
+                  |FAX：0544-55-5753
                 ul.list-social.list-social--circle
                   li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
                   li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/18-youtube.svg" alt="Instagram" width=24)

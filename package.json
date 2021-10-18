@@ -10,7 +10,13 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "gulp": "gulp"
-  }
+  },
+  "config": {
+    "nuxt": {
+      "host": "localhost",
+      "port": "3333"
+    }
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.1",

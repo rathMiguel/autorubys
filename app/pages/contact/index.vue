@@ -6,6 +6,13 @@ div
     section.section.page-section
       .container.container-single
         .section-header
+          h2.c-title_info 発注、見積り希望の業者様へ
+        p 発注、見積依頼書をご用意しました。<br>下記リンク先の案内に従って、発注、見積りのご依頼をいただきますよう、お願い申し上げます。
+        .text-center
+          p: nuxt-link(to="/news/post/181"): img(src="~/assets/images/contact/bnr_gyousya_fax.png" alt="")
+    section.section.page-section
+      .container.container-single
+        .section-header
           h2.c-title_info お電話からのお問い合わせ
         .text-center
           a(href="tel:0857720727").c-button.button-tel.tel

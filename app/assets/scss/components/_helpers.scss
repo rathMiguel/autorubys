@@ -17,3 +17,21 @@
     font-size: 16px;
   }
 }
+
+.hide-lg{
+  @include media(lg){
+    display: none;
+  }
+}
+
+.hide-md{
+  @include media(md){
+    display: none;
+  }
+}
+
+.hide-sm{
+  @include media(sm){
+    display: none;
+  }
+}

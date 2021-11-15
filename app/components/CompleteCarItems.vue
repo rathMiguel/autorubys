@@ -1,37 +1,19 @@
 <template lang="pug">
   .tabarea
+    //- pre {{ $data.current }}
+    //- pre {{ $data.posts }}
     .tab-header
       ul.tab-list
-        li.active Jungle Green
-        li Ivory
+        template(v-for="name in posts")
+          li(:class="{'active' : name.id == current }" v-on:click="tabClick(name.id)") {{ name.title.rendered }}
     .tab-main
-      .tab-block
+      .tab-block(v-for="val in posts" v-show="val.id == current")
         .sliderarea
           slick(ref="slick" :options="slickOptions")
-            template(v-for="val in items[0].gallery")
-              .tab-photos: img(:src="val" alt="")
+            .tab-photos(v-for="photo in val.acf.gallery"): img(:src="photo.url" alt="")
         .content
           h2.title-primary コンプリート価格
-          .price
-            .price-tab
-              ul.price-tablist
-                li.active JB74
-                li JB64
-            .price-content
-              .price-block
-                .total
-                  dl.total-dl
-                    dt 合計価格
-                    dd
-                      |￥
-                      span.total-num {{ 2628670 | addComma }}
-                  table.price-table
-                    tbody
-                      tr(v-for="val in items[0].parts")
-                        td {{ val.name }}
-                        td ￥{{ val.price | addComma }}
-                  .captiopn
-                    p ※車両、工賃等含む<br>※コンプリートデモカーのホイールとタイヤだけはお好きにカスタムできます。お気軽にお問い合わせください。
+          CompleteCarTypes(:option="val.acf.options")
 </template>
 
 <style lang="scss" scoped>
@@ -167,95 +149,19 @@ $color-secondary: #BDB17F;
   }
 }
 
-.price-tab{
-  margin-bottom: 30px;
-}
-
-.price-tablist{
-  display: flex;
-  border-bottom: 1px solid lighten($color-secondary, 20);
-  li{
-    cursor: pointer;
-    display: inline-flex;
-    min-width: 190px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    background-color: #F2EFE5;
-    color: $color-primary;
-    
-    @include media(sm){
-      min-width: 120px;
-      height: 44px;
-    }
-    &.active{
-      background-color: #DBD6C4;
-    }
-  }
-}
-
-.total-dl{
-  background-color: #F9F9F9;
-  font-weight: 700;
-  color: $color-primary;
-  font-size: 30px;
-  padding: 8px 20px;
-  margin-bottom: 30px;
-  @include media(sm){
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  dt{
-    display: inline-block;
-  }
-  dd{
-    display: inline-block;
-  }
-}
-
-.price-table{
-  font-size: 14px;
-  width: 100%;
-  border-top: 3px solid $color-primary;
-  border-bottom: 1px solid $color-primary;
-  color: $color-primary;
-  @include media(sm){
-    font-size: 12px;
-  }
-  tr{
-    background-color: #F2EFE5;
-    &:nth-child(even){
-      background-color: #FBFBFB;
-    }
-
-    th, td{
-      padding: 10px 15px;
-      @include media(sp){
-        padding: 6px 10px;
-        display: block;
-      }
-      &:nth-child(2){
-        text-align: right;
-      }
-    }
-  }
-}
-
-.captiopn{
-  font-size: 12px;
-  margin-top: 10px;
-  p{
-    margin-bottom: 0;
-  }
-}
-
 </style>
 
 <script>
+
+import CompleteCarTypes from '~/components/CompleteCarTypes.vue'
+
 export default {
+  components: {
+    CompleteCarTypes
+  },
   data: function(){
     return {
-      curtrent: 1,
+      current: 0,
       slickOptions: {
         dots: false,
         speed: 500,
@@ -266,86 +172,22 @@ export default {
         infinite: true,
         controls: true
       },
-      items: [
-        {
-          title: 'Jungle Green',
-          gallery: [
-            '/completecar/image4.png',
-            '/completecar/image1.png'
-          ],
-          total: 2628670,
-          parts: [
-            {
-              name: '筆記体クラシック2トーン塗装納品スズスポグリル',
-              price: 64680
-            },
-            {
-              name: 'JB74オールドスタイルバンバーフォグランプユニット付き',
-              price: 65780
-            },
-            {
-              name: 'スチール製マットプラック塗装　クラシックストレートリアパンバーステップ付き',
-              price: 60280
-            },
-            {
-              name: 'タイヤTOYOオーブンカントリーMT225/7SR1×4',
-              price: 72600
-            },
-            {
-              name: 'jb74ホイール　ディーン　16インチ6J-SPCD139.4',
-              price: 104720
-            },
-            {
-              name: 'JB74専用1インチリフトアップキットコイルリアショック延長　プラケットリア用ロングプレーキホース付き',
-              price: 42900
-            },
-            {
-              name: 'その他シートカバーアウトクラスカーズ',
-              price: 27500
-            },
-            {
-              name: 'スベアタイヤカバー',
-              price: 8800
-            },
-            {
-              name: 'ナンバープレート移動キットLEDナンパー灯付き',
-              price: 15180
-            },
-            {
-              name: 'JB74 SZIGENマフラーショートバンバー用',
-              price: 84150
-            },
-            {
-              name: 'スベアタイヤ移動プラケットキット',
-              price: 19580
-            },
-            {
-              name: 'ラプターカラー塗装リア上部、リア側面上部',
-              price: 187000
-            },
-            {
-              name: '工賃JB741インチリフトアッブ',
-              price: 38500
-            },
-            {
-              name: 'JB74新車車両価格',
-              price: 1793000
-            }
-          ]
-        },
-        {
-          title: 'Ivory',
-          gallery: [
-            'image4.png',
-            'image4.png'
-          ]
-        }
-      ]
+      posts: []
+    }
+  },
+  mounted(){
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wp/v2/completecar/?per_page=10`)
+    .then((res) => {
+      this.current = res.data[0].id;
+      return this.posts = res.data
+    }).catch((e => {
+      error({ searchPosts: e.response.status, message: e.message })
+    }))
+  },
+  methods: {
+    tabClick: function(val) {
+      return this.current = val
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

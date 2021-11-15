@@ -9,44 +9,6 @@ function my_admin_enqueue($hook) {
 }
 add_action( 'admin_enqueue_scripts', 'my_admin_enqueue' );
 
-// 独自エンドポイントの追加
-function add_my_endpoints() {
-  register_rest_route('custom/v0', '/posts', [
-    'callback' => 'fetch_posts_data',
-    'permission_callback' => '__return_true',
-    'methods'  =>  WP_REST_Server::READABLE
-  ]);
-
-  register_rest_route('custom/v0', '/post/(?P<id>\d+)', [
-    'callback' => 'fetch_post_data',
-    'permission_callback' => '__return_true',
-    'methods'  =>  WP_REST_Server::READABLE
-  ]);
-
-}
-add_action('rest_api_init', 'add_my_endpoints');
-
-// apiデータの取得
-function fetch_posts_data($param) {
-  return rest_response('posts', $param);
-}
-
-function fetch_post_data($param) {
-  return rest_response('post', $param);
-}
-
-function fetch_post_preview_data($param) {
-  return rest_response('post-preview', $param);
-}
-
-function rest_response($file_name, $param = null) {
-  $api_file = locate_template("api/${file_name}.php");
-  $res      = !empty($api_file) ? include_once $api_file : [];
-  $response = new WP_REST_Response($res);
-  $response->set_status(200);
-  return $response;
-}
-
 // カスタム投稿タイプの追加
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
@@ -61,6 +23,22 @@ function create_post_type() {
       'public' => true,
       'show_in_rest' => true,
       'rest_base' => 'products',
+      'menu_position' => 5,
+      'publicly_queryable' => false
+    )
+  );
+
+  register_post_type( 'completecar',
+    array(
+      'supports' => array('title'),
+      'labels' => array(
+        'name' => __( 'コンプリートカー' ),
+        'singular_name' => __( 'コンプリートカー' ),
+      ),
+      'has_archive' => false,
+      'public' => true,
+      'show_in_rest' => true,
+      'rest_base' => 'completecar',
       'menu_position' => 5,
       'publicly_queryable' => false
     )

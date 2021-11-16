@@ -9,17 +9,19 @@
       .price-block(v-for="(val, index) in option" v-show="index == current")
         .total
           dl.total-dl
-            dt 合計価格
+            dt コンプリート価格：
             dd
               |￥
               span.total-num {{ val.total | addComma }}
-          table.price-table
-            tbody
-              tr(v-for="val in val.pricelist")
-                td {{ val.item }}
-                td ￥{{ val.price | addComma }}
-          .captiopn
-            p(v-html="val.caption")
+          .total-caption
+            p: small ※コンプリート価格とは、車両、工賃等を含んだ価格です。
+        table.price-table
+          tbody
+            tr(v-for="val in val.pricelist")
+              td {{ val.item }}
+              td ￥{{ val.price | addComma }}
+        .captiopn
+          p(v-html="val.caption")
 </template>
 
 <style lang="scss" scoped>
@@ -54,19 +56,37 @@ $color-secondary: #BDB17F;
   }
 }
 
-.total-dl{
+.total{
   background-color: #F9F9F9;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  color: $color-primary;
+  line-height: 1.2;
+  @include media(sm){
+    margin-bottom: 20px;
+  }
+
+  p{
+    margin-bottom: 0;
+    small{
+      font-size: 0.8em;
+    }
+  }
+}
+
+.total-dl{
   font-weight: 700;
   color: $color-primary;
   font-size: 30px;
-  padding: 8px 20px;
-  margin-bottom: 30px;
   @include media(sm){
     font-size: 20px;
-    margin-bottom: 20px;
   }
   dt{
     display: inline-block;
+    font-size: 0.8em;
+    @include media(sm){
+      font-size: 0.7em;
+    }
   }
   dd{
     display: inline-block;

@@ -12,7 +12,6 @@
           slick(ref="slick" :options="slickOptions")
             .tab-photos(v-for="photo in val.acf.gallery"): img(:src="photo.url" alt="")
         .content
-          h2.title-primary コンプリート価格
           CompleteCarTypes(:option="val.acf.options")
 </template>
 

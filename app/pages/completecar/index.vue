@@ -60,7 +60,9 @@ div
             ul.cta-list
               li: a(href="").tel.c-button.button.button-primary
                 i.icon.icon-phone: img(src="~/assets/images/icons/fa-phone.svg" alt="tel:0544265508")
-                |0544-26-5508
+                span.cta-telmain
+                  span.cta-telnum 0544-26-5508
+                  span.cta-telwt 営業時間 10:00～19:00 水・木定休
               li: nuxt-link(to="/contact/").c-button.button.button-seconary メールでお問い合わせ
 </template>
 
@@ -325,7 +327,7 @@ $color-secondary: #BDB17F;
 
   .icon-phone{
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 14px;
     width: 28px;
     @include media(sm){
       width: 20px;
@@ -338,6 +340,25 @@ $color-secondary: #BDB17F;
     font-size: 28px;
     @include media(sm){
       font-size: 22px;
+    }
+
+    .cta-telmain{
+      text-align: left;
+      line-height: 1;
+      .cta-telnum{
+        display: block;
+        margin-bottom: -6px;
+        @include media(sm){
+          margin-bottom: -3px;
+        }
+      }
+      .cta-telwt{
+        font-size: 13px;
+        font-weight: 400;
+        @include media(sm){
+          font-size: 11px;
+        }
+      }
     }
   }
 

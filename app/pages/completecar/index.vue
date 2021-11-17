@@ -105,7 +105,7 @@ $color-secondary: #BDB17F;
     line-height: 1.2;
     margin-bottom: 50px;
     font-family: serif;
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Bebas Neue', cursive;
     @include media(sm){
       font-size: 30px;
       margin-bottom: 20px;

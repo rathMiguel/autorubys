@@ -11,6 +11,7 @@
         .sliderarea
           slick(ref="slick" :options="slickOptions")
             .tab-photos(v-for="photo in val.acf.gallery"): img(:src="photo.url" alt="")
+        CompleteCarEquipment(:gallery="val.acf.equipment")
         .content
           CompleteCarTypes(:option="val.acf.options")
 </template>
@@ -153,10 +154,12 @@ $color-secondary: #BDB17F;
 <script>
 
 import CompleteCarTypes from '~/components/CompleteCarTypes.vue'
+import CompleteCarEquipment from '~/components/CompleteCarEquipment.vue'
 
 export default {
   components: {
-    CompleteCarTypes
+    CompleteCarTypes,
+    CompleteCarEquipment
   },
   data: function(){
     return {

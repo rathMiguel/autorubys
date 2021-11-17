@@ -9,7 +9,7 @@ div
           p.hero-lead.hero-lead--en complete my style 
             strong jimny 
             |with autobuy's
-          p.hero-lead.hero-lead--ja - 自分だけのジムニー作り -
+          p.hero-lead.hero-lead--ja 自分だけのジムニー作り
     section.section
       header.section-header
         h2.title.section-title--ja ラインアップ
@@ -123,6 +123,20 @@ $color-secondary: #BDB17F;
     font-weight: 700;
     @include media(sm){
       font-size: 20px;
+    }
+    &:before,
+    &:after{
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 2em;
+      border-bottom: 1px solid #FFF;
+      text-shadow: 1px 1px 0 rgba(#000, 0.5);
+      margin-left: 0.3em;
+      margin-right: 0.3em;
+      @include media(lg){
+        width: 5em;
+      }
     }
   }
 }

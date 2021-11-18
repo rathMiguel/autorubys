@@ -155,7 +155,9 @@ $color-secondary: #BDB17F;
 
 .fade-enter-active,.fade-leave-active{ 
   transition: opacity ease 0.3s;
+  opacity: 1;
   .popup-panel{
+    opacity: 1;
     transition: all ease 0.2s 0.1s;
   }
 }
@@ -163,7 +165,8 @@ $color-secondary: #BDB17F;
 .fade-enter, .fade-leave-to {
   opacity: 0;
   .popup-panel{
-    transform: scale(1.1);
+    opacity: 0;
+    transform: scale(0.9);
   }
 }
 

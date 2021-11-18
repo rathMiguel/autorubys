@@ -12,7 +12,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'google-site-verification', content: 'aX5q3GcphotqPppDU2UWgMNsKiRiAfdptHX57wxgOSw' }
     ],
     script: [
       { src: '/script/ptengine.js' }

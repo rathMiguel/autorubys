@@ -406,14 +406,7 @@ $color-secondary: #BDB17F;
 
 <script>
 
-import TheBreadcrumb from '~/components/TheBreadcrumb.vue'
-import CompleteCarItems from '~/components/CompleteCarItems.vue'
-
 export default {
-  components: {
-    TheBreadcrumb,
-    CompleteCarItems
-  },
   head () {
     return {
       title: 'コンプリートカー - 株式会社オートルビーズ'

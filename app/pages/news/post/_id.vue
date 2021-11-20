@@ -65,14 +65,7 @@ div
 
 <script>
 
-import ThePagetitle from '~/components/ThePagetitle.vue'
-import TheBreadcrumb from '~/components/TheBreadcrumb.vue'
-
 export default {
-  components: {
-    ThePagetitle,
-    TheBreadcrumb
-  },
   head () {
     return {
       title: this.post.title.rendered

@@ -8,8 +8,7 @@
     "dev": "nuxt ",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "gulp": "gulp"
+    "generate": "nuxt generate"
   },
   "config": {
     "nuxt": {
@@ -22,30 +21,30 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/style-resources": "^1.2.0",
+    "@nuxtjs/style-resources": "^1.2.1",
     "jquery": "^3.6.0",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "nuxt-webfontloader": "^1.1.0",
     "reset.css": "^2.0.2",
     "slick-carousel": "^1.8.1",
-    "vee-validate": "^3.4.10",
+    "vee-validate": "^3.4.14",
     "vue-scrollto": "^2.20.0",
     "vue-server-renderer": "^2.6.14",
     "vue-slick": "^1.1.16"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@nuxt/components": "^2.1.8",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/pwa": "^3.3.5",
-    "axios": "^0.21.1",
+    "axios": "^0.24.0",
     "gulp": "^4.0.2",
     "js-yaml": "^4.1.0",
     "node-sass": "^6.0.1",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
-    "sass-loader": "^10.1.0",
-    "vue-template-compiler": "^2.6.14"
+    "sass-loader": "^10.1.1",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
   }
 }

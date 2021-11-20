@@ -18,16 +18,7 @@ div
 
 <script>
 
-import ThePagetitle from '~/components/ThePagetitle.vue'
-import TheBreadcrumb from '~/components/TheBreadcrumb.vue'
-import ContactForm from '~/components/ContactForm.vue'
-
 export default {
-  components: {
-    ThePagetitle,
-    TheBreadcrumb,
-    ContactForm
-  },
   head () {
     return {
       title: '送信完了 - 株式会社オートルビーズ（鳥取県 岩美町）'

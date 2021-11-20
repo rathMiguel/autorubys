@@ -13,25 +13,9 @@
 </template>
 
 <script>
-import LpInfo from '~/components/LpInfo.vue'
-import LpHowto from '~/components/LpHowto.vue'
-import LpMedia from '~/components/LpMedia.vue'
-import LpForm from '~/components/LpForm.vue'
-import LpColors from '~/components/LpColors.vue'
-import LpGallery from '~/components/LpGallery.vue'
-import TheBreadcrumb from '~/components/TheBreadcrumb.vue'
 
 export default {
   layout: 'lpSuzuspo',
-  components: {
-    LpInfo,
-    LpHowto,
-    LpMedia,
-    LpForm,
-    LpColors,
-    LpGallery,
-    TheBreadcrumb
-  },
   head () {
     return {
       title: 'スズスポグリル - あなたのジムニーを可愛く変身させるグリルパーツ',

@@ -50,20 +50,7 @@ div
 
 <script>
 
-import ThePagetitle from '~/components/ThePagetitle.vue'
-import TheBreadcrumb from '~/components/TheBreadcrumb.vue'
-import ProductsOutro from '~/components/ProductsOutro.vue'
-import CatalogNav from '~/components/CatalogNav.vue'
-import CatalogContent from '~/components/CatalogContent.vue'
-
 export default {
-  components: {
-    ThePagetitle,
-    TheBreadcrumb,
-    ProductsOutro,
-    CatalogNav,
-    CatalogContent
-  },
   head () {
     return {
       title: '製品カタログ - 株式会社オートルビーズ（鳥取県 岩美町）'

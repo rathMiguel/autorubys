@@ -10,10 +10,6 @@
       .hero__cta
         span.hero-text--youtube: img(src="~/assets/images/branch/hero_youtube_text.svg" alt="オートルビーズブランチストア公式YouTube ジムニーの魅力を配信中！")
         a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank").hero-link--youtube: img(src="~/assets/images/branch/hero_youtube_btn.svg" alt="")
-      //- .hero__scroll
-        nuxt-link(v-scroll-to="`#scrolldown`" to)
-          span.scroll-text scroll
-          i.scroll-down: img(src="~/assets/images/branch/down.svg" alt="")
     i#scrolldown
     section#topics
       .topics-bg
@@ -115,12 +111,8 @@
 </template>
 
 <script>
-import BranchNews from '~/components/BranchNews.vue'
 
 export default {
-  components: {
-    BranchNews
-  },
   layout: 'lp',
   head () {
     return {

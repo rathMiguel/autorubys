@@ -153,14 +153,7 @@ $color-secondary: #BDB17F;
 
 <script>
 
-import CompleteCarTypes from '~/components/CompleteCarTypes.vue'
-import CompleteCarEquipment from '~/components/CompleteCarEquipment.vue'
-
 export default {
-  components: {
-    CompleteCarTypes,
-    CompleteCarEquipment
-  },
   data: function(){
     return {
       current: 0,

@@ -296,18 +296,7 @@ $color-primary: #D70247;
 
 <script>
 
-import HomeHeroSlider from '~/components/HomeHeroSlider.vue'
-import HomeNewsPrimary from '~/components/HomeNewsPrimary.vue'
-import TheNewsList from '~/components/TheNewsList.vue'
-import TheInstagram from '~/components/TheInstagram.vue'
-
 export default {
-  components: {
-    HomeHeroSlider,
-    HomeNewsPrimary,
-    TheNewsList,
-    TheInstagram
-  },
   head () {
     return {
       title: '株式会社オートルビーズ - 鳥取県 岩美町の車販売、修理・メンテナンスまで',

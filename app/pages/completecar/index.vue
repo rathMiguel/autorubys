@@ -19,38 +19,31 @@ div
           CompleteCarItems
     section.section
       header.section-header
-        h2.title.section-title--ja コンプリートカーを選ぶ理由
+        h2.title.section-title--ja コンプリートカーを選ぶ3つの理由
         span.title.section-title--en Reason
       .bg.bg-secondary
         .container
           .reason-wrap
-            .reason-block
-              .reason-photo: img(src="~/assets/images/completecar/complete_photo1.jpg" alt="")
-              .reason-content
-                p.lead.lead-reason 新車、中古車納車時と<br class="hide-sm">同時に
-                  span.marker 理想のカスタム
-                  |がされたジムニーに乗れる<br class="hide-sm">素敵プラン
-            .reason-block
-              .reason-photo: img(src="~/assets/images/completecar/complete_photo2.jpg" alt="")
-              .reason-content
-                p.lead.lead-reason ローンの場合はパーツ代、<br class="hide-sm">（工賃代金）を
-                  span.marker 車両代金に含める
-                  |ことができるの
-                  span.marker お得で楽
-            .reason-block
-              .reason-photo: img(src="~/assets/images/completecar/complete_photo3.jpg" alt="")
-              .reason-content
-                p.lead.lead-reason 構造変更が必要なカスタムの<br class="hide-sm">場合、
-                  span.marker 納車時前に手続きが<br class="hide-sm">できる
-                  |のでスムーズ
-            .reason-block
-              .reason-photo: img(src="~/assets/images/completecar/complete_photo4.jpg" alt="")
-              .reason-content
-                p.lead.lead-reason
-                  span.marker ジムニーに特化した
-                  |専門店<br class="hide-sm">だから、知識がなくても<br class="hide-sm">
-                  span.marker お客様の好みや希望通り
-                  |の<br>コンプリートカーが可能
+            .reason-block-wrap
+              .reason-block
+                .reason-photo: img(src="~/assets/images/completecar/complete_photo1.jpg" alt="")
+                .reason-content
+                  h3.lead.lead-reason 納車されたその日から特別な一台に
+                  p コンプリートカーとは、新車、中古車を、特別にカスタマイズされた形で販売する車のことです。
+                  p グリルからホイール、ライトなどの細かいパーツはもちろん、シートカバーなど、内装にこだわったお好みの仕様にすることも可能です。
+            .reason-block-wrap
+              .reason-block
+                .reason-photo: img(src="~/assets/images/completecar/complete_photo2.jpg" alt="")
+                .reason-content
+                  h3.lead.lead-reason パーツ代、工賃も全てコミコミ。<br>だから、経済的
+                  p ご自身で愛車をカスタマイズする場合、パーツを一つずつ揃えることになり、かえって費用が高額になってしまうケースも...。
+                  p コンプリートカーはであれば、無駄なパーツを買わずに済みます。また、ローンを組む場合はパーツ代、工賃代も含んで組むことができるため、パーツごとに購入する場合よりもお得になります。
+            .reason-block-wrap
+              .reason-block
+                .reason-photo: img(src="~/assets/images/completecar/complete_photo3.jpg" alt="")
+                .reason-content
+                  h3.lead.lead-reason ジムニーに特化したお店だからできる、確かな提案とアフターサービス
+                  p 知識がない方でも大丈夫。ジムニーを愛する私たちが、あなたの理想のお車に近づくよう、お手伝いいたします。ご納車後のアフターサービスも安心して、お任せください。
     section.section.cta
       .container
         .cta-panel
@@ -175,8 +168,8 @@ $color-secondary: #BDB17F;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border-top: 2px solid $color-primary;
-  border-bottom: 2px solid $color-primary;
+  border-top: 4px double $color-primary;
+  border-bottom: 4px double $color-primary;
   padding-top: 35px;
   padding-bottom: 35px;
   margin-bottom: 100px;
@@ -217,16 +210,26 @@ $color-secondary: #BDB17F;
 
 // reason
 
-.reason-block{
-  display: flex;
+.reason-block-wrap{
+  border: 4px solid $color-secondary;
+  margin-bottom: 50px;
+  padding: 15px;
   @include media(sm){
-    flex-direction: column;
     margin-bottom: 40px;
   }
-  &:nth-child(even){
-    @include media(md-lg){
-      flex-direction: row-reverse;
-    }
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.reason-block{
+  display: flex;
+  background-color: lighten($color-secondary, 30);
+  padding: 40px;
+  align-items: flex-start;
+  @include media(sm){
+    flex-direction: column;
+    padding: 15px;
   }
 }
 
@@ -237,13 +240,16 @@ $color-secondary: #BDB17F;
   @include media(sm){
     margin-left: -15px;
     margin-right: -15px;
+    margin-top: -15px;
   }
+
   img{
     display: block;
     width: 100%;
+    aspect-ratio: 7 / 5;
+    object-fit: cover;
     @include media(sm){
       aspect-ratio: 16 / 9;
-      object-fit: cover;
     }
   }
 }
@@ -254,23 +260,35 @@ $color-secondary: #BDB17F;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  padding: 20px;
+  padding-left: 40px;
+  padding-top: 10px;
+  color: $color-primary;
   @include media(sm){
     padding: 20px 0;
     width: auto;
   }
+
+  p{
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
 }
 
 .lead-reason{
-  font-size: 35px;
+  font-size: 25px;
   color: $color-primary;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   font-weight: 700;
+  line-height: 1.4;
+  border-bottom: 2px solid $color-primary;
+  padding-bottom: 10px;
   @include media(sm){
     font-size: 20px;
-  }
-  .marker{
-    background:linear-gradient(transparent 65%, #FCE300 65%);
+    margin-bottom: 15px;
   }
 }
 
@@ -278,6 +296,9 @@ $color-secondary: #BDB17F;
 
 .cta{
   margin-bottom: 150px;
+  @include media(lg){
+    margin-top: 50px;
+  }
   @include media(sm){
     margin-bottom: 80px;
   }

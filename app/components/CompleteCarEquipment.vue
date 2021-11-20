@@ -178,9 +178,10 @@ $color-secondary: #BDB17F;
 export default {
   props: {
     gallery: {
-      type: Array,
+      type: [Boolean, Array],
       default: [],
-      required: true
+      required: true,
+      default: 0
     }
   },
   data(){

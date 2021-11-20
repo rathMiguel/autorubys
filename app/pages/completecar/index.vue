@@ -211,7 +211,7 @@ $color-secondary: #BDB17F;
 // reason
 
 .reason-block-wrap{
-  border: 4px solid $color-secondary;
+  border: 4px solid lighten($color-primary, 10);
   margin-bottom: 50px;
   padding: 15px;
   @include media(sm){
@@ -225,7 +225,7 @@ $color-secondary: #BDB17F;
 .reason-block{
   display: flex;
   background-color: lighten($color-secondary, 30);
-  padding: 40px;
+  padding: 50px;
   align-items: flex-start;
   @include media(sm){
     flex-direction: column;

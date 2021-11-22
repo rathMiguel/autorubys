@@ -29,15 +29,15 @@ div
                 .reason-photo: img(src="~/assets/images/completecar/complete_photo1.jpg" alt="")
                 .reason-content
                   h3.lead.lead-reason 納車されたその日から特別な一台に
-                  p コンプリートカーとは、新車、中古車を、特別にカスタマイズされた形で販売する車のことです。
-                  p グリルからホイール、ライトなどの細かいパーツはもちろん、シートカバーなど、内装にこだわったお好みの仕様にすることも可能です。
+                  p コンプリートカーとは、新車、中古車を、特別にカスタマイズされた形で販売する車を言います。
+                  p グリルからホイール、ライトなどの細かいパーツはもちろん、シートカバーなど、内装にこだわったあなただけの特別な一台を納車させて頂きます。
             .reason-block-wrap
               .reason-block
                 .reason-photo: img(src="~/assets/images/completecar/complete_photo2.jpg" alt="")
                 .reason-content
                   h3.lead.lead-reason パーツ代、工賃も全てコミコミ。<br>だから、経済的
                   p ご自身で愛車をカスタマイズする場合、パーツを一つずつ揃えることになり、かえって費用が高額になってしまうケースも...。
-                  p コンプリートカーはであれば、無駄なパーツを買わずに済みます。また、ローンを組む場合はパーツ代、工賃代も含んで組むことができるため、パーツごとに購入する場合よりもお得になります。
+                  p コンプリートカーであれば、無駄なパーツを買わずに済みます。また、ローンを組む場合はパーツ代、工賃代も含んで組むことができるため、パーツごとに購入する場合よりもお得になります。
             .reason-block-wrap
               .reason-block
                 .reason-photo: img(src="~/assets/images/completecar/complete_photo3.jpg" alt="")
@@ -211,7 +211,7 @@ $color-secondary: #BDB17F;
 // reason
 
 .reason-block-wrap{
-  border: 4px solid lighten($color-primary, 10);
+  border: 4px solid lighten($color-secondary, 10);
   margin-bottom: 50px;
   padding: 15px;
   @include media(sm){

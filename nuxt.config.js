@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 export default {
   srcDir: 'app/',
   target: 'static',

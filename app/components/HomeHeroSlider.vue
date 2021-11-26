@@ -3,7 +3,7 @@
   slick(ref="slick" :options="slickOptions")
     .slide-block: nuxt-link(to="/branchstore/"): img(src="~assets/images/home/slide_4.jpg" alt="" decoding="async")
     .slide-block: nuxt-link(to="/products/"): img(src="~assets/images/home/slide_2.jpg" alt="" decoding="async")
-    .slide-block: nuxt-link(to="/contact/"): img(src="~assets/images/home/slide_3.jpg" alt="" decoding="async")
+    .slide-block: nuxt-link(to="/completecar/"): img(src="~assets/images/home/slide_completecar.jpg" alt="" decoding="async")
 </template>
 
 <script>

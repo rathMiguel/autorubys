@@ -13,6 +13,7 @@
             dd
               |￥
               span.total-num {{ val.total | addComma }}
+              |～
           .total-caption
             p: small ※コンプリート価格とは、車両、工賃等を含んだ価格です。
         table.price-table

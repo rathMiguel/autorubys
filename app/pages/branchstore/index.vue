@@ -5,6 +5,7 @@
         li: nuxt-link(v-scroll-to="'#topics'" to) トピックス
         li: nuxt-link(v-scroll-to="'#features'" to) ブランチストアの特徴
         li: nuxt-link(v-scroll-to="'#access'" to) 交通アクセス
+        li: nuxt-link(to="/completecar/") コンプリートカー
     .hero
       .hero__logo: img(src="~/assets/images/branch/hero_catch.svg" alt="ブランチストア OPEN!!")
       .hero__cta

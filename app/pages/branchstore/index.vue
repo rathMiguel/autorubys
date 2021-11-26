@@ -5,15 +5,12 @@
         li: nuxt-link(v-scroll-to="'#topics'" to) トピックス
         li: nuxt-link(v-scroll-to="'#features'" to) ブランチストアの特徴
         li: nuxt-link(v-scroll-to="'#access'" to) 交通アクセス
+        li: nuxt-link(to="/completecar/") コンプリートカー
     .hero
       .hero__logo: img(src="~/assets/images/branch/hero_catch.svg" alt="ブランチストア OPEN!!")
       .hero__cta
         span.hero-text--youtube: img(src="~/assets/images/branch/hero_youtube_text.svg" alt="オートルビーズブランチストア公式YouTube ジムニーの魅力を配信中！")
         a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank").hero-link--youtube: img(src="~/assets/images/branch/hero_youtube_btn.svg" alt="")
-      //- .hero__scroll
-        nuxt-link(v-scroll-to="`#scrolldown`" to)
-          span.scroll-text scroll
-          i.scroll-down: img(src="~/assets/images/branch/down.svg" alt="")
     i#scrolldown
     section#topics
       .topics-bg
@@ -111,16 +108,12 @@
                   |FAX：0544-55-5753
                 ul.list-social.list-social--circle
                   li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
-                  li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/18-youtube.svg" alt="Instagram" width=24)
+                  li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/youtube-brands.svg" alt="YouTube" width=24)
 </template>
 
 <script>
-import BranchNews from '~/components/BranchNews.vue'
 
 export default {
-  components: {
-    BranchNews
-  },
   layout: 'lp',
   head () {
     return {

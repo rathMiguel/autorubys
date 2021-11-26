@@ -6,6 +6,9 @@ export default {
   */
   head: {
     title: '',
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -42,6 +45,8 @@ export default {
     '~/plugins/vee-validate',
     '~/plugins/filter.js'
   ],
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
   /*
   ** Nuxt.js dev-modules
   */

@@ -8,7 +8,7 @@
           .block-social
             ul.block-social_list
               li: a(href="https://www.instagram.com/autorubys696/" target="_blank"): img(src="~assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
-              li: a(href="https://www.youtube.com/channel/UCJVVwZUZLVwaC0s9baUX0WA" target="_blank"): img(src="~assets/images/icons/18-youtube.svg" alt="YouTube" width=24)
+              li: a(href="https://www.youtube.com/channel/UCJVVwZUZLVwaC0s9baUX0WA" target="_blank"): img(src="~assets/images/icons/youtube-brands.svg" alt="YouTube" width=24)
     .footer-main
       .container.footer-container
         .footer-main_wrap

@@ -6,6 +6,7 @@
         li: nuxt-link(v-scroll-to="'#features'" to) ブランチストアの特徴
         li: nuxt-link(v-scroll-to="'#access'" to) 交通アクセス
         li: nuxt-link(to="/completecar/") コンプリートカー
+        li: a(href="https://autorubys.base.shop/" target="_blank") オンラインストア
     .hero
       .hero__logo: img(src="~/assets/images/branch/hero_catch.svg" alt="ブランチストア OPEN!!")
       .hero__cta
@@ -109,6 +110,7 @@
                 ul.list-social.list-social--circle
                   li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
                   li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/youtube-brands.svg" alt="YouTube" width=24)
+                  li: a(href="https://autorubys.base.shop/" target="_blank"): img(src="~/assets/images/branch/base2.svg" alt="公式オンラインショップ" width=33)
 </template>
 
 <script>
@@ -166,11 +168,19 @@ export default {
 
   a{
     display: inline-block;
-    background-color: rgba(#000, 0.5);
+    background-color: rgba(#000, 0.4);
     color: #FFF;
     text-decoration: none;
     padding: 6px 10px;
     padding-right: 20px;
+    transition: all ease 0.3s 0.1s;
+    transform: translateX(-10px);
+    
+    &:hover{
+      transform: translateX(0);
+      background-color: rgba(#000, 0.8);
+      opacity: 1;
+    }
   }
 }
 
@@ -742,8 +752,8 @@ $galleryImages:
 
 .list-social{
   &--circle{
+    display: flex;
     li{
-      display: inline-block;
       margin-right: 10px;
       a{
         background-color: #000;

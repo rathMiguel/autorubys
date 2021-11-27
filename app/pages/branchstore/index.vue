@@ -111,6 +111,12 @@
                   li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
                   li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/youtube-brands.svg" alt="YouTube" width=24)
                   li: a(href="https://autorubys.base.shop/" target="_blank"): img(src="~/assets/images/branch/base2.svg" alt="公式オンラインショップ" width=33)
+    #banners
+      .banners-bg
+        .container
+          ul.banners-list
+            li: a(href="https://autorubys.base.shop/" target="_blank"): img(src="~/assets/images/branch/branch_bnr1.jpg" alt="公式オンラインストア")
+            li: a(href="/completecar/"): img(src="~/assets/images/branch/branch_bnr2.jpg" alt="コンプリートカー")
 </template>
 
 <script>
@@ -764,6 +770,43 @@ $galleryImages:
         align-items: center;
         justify-content: center;
       }
+    }
+  }
+}
+
+.banners-bg{
+  background-color: lighten(#bdb17f, 30);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media(md){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include media(lg){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.banners-list{
+  display: flex;
+  @include media(sm){
+    flex-direction: column;
+  }
+  @include media(md-lg){
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  li{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    @include media(md-lg){
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    img{
+      display: block;
     }
   }
 }

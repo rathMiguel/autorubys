@@ -187,6 +187,19 @@ export default {
       background-color: rgba(#000, 0.8);
       opacity: 1;
     }
+
+    &[target="_blank"]{
+      &::after{
+        content: "";
+        display: inline-block;
+        margin-left: 0.3em;
+        height: 13px;
+        width: 13px;
+        background-image: url('~/assets/images/icons/arrow-up-right-from-square-solid.svg');
+        background-size: contain;
+        background-position: center center;
+      }
+    }
   }
 }
 

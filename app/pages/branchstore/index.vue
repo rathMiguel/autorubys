@@ -6,6 +6,7 @@
         li: nuxt-link(v-scroll-to="'#features'" to) ブランチストアの特徴
         li: nuxt-link(v-scroll-to="'#access'" to) 交通アクセス
         li: nuxt-link(to="/completecar/") コンプリートカー
+        li: a(href="https://autorubys.base.shop/" target="_blank") オンラインストア
     .hero
       .hero__logo: img(src="~/assets/images/branch/hero_catch.svg" alt="ブランチストア OPEN!!")
       .hero__cta
@@ -109,6 +110,13 @@
                 ul.list-social.list-social--circle
                   li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
                   li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/youtube-brands.svg" alt="YouTube" width=24)
+                  li: a(href="https://autorubys.base.shop/" target="_blank"): img(src="~/assets/images/branch/base2.svg" alt="公式オンラインショップ" width=33)
+    #banners
+      .banners-bg
+        .container
+          ul.banners-list
+            li: a(href="https://autorubys.base.shop/" target="_blank"): img(src="~/assets/images/branch/branch_bnr1.jpg" alt="公式オンラインストア")
+            li: a(href="/completecar/"): img(src="~/assets/images/branch/branch_bnr2.jpg" alt="コンプリートカー")
 </template>
 
 <script>
@@ -166,11 +174,32 @@ export default {
 
   a{
     display: inline-block;
-    background-color: rgba(#000, 0.5);
+    background-color: rgba(#000, 0.4);
     color: #FFF;
     text-decoration: none;
     padding: 6px 10px;
     padding-right: 20px;
+    transition: all ease 0.3s 0.1s;
+    transform: translateX(-10px);
+    
+    &:hover{
+      transform: translateX(0);
+      background-color: rgba(#000, 0.8);
+      opacity: 1;
+    }
+
+    &[target="_blank"]{
+      &::after{
+        content: "";
+        display: inline-block;
+        margin-left: 0.3em;
+        height: 13px;
+        width: 13px;
+        background-image: url('~/assets/images/icons/arrow-up-right-from-square-solid.svg');
+        background-size: contain;
+        background-position: center center;
+      }
+    }
   }
 }
 
@@ -742,8 +771,8 @@ $galleryImages:
 
 .list-social{
   &--circle{
+    display: flex;
     li{
-      display: inline-block;
       margin-right: 10px;
       a{
         background-color: #000;
@@ -754,6 +783,43 @@ $galleryImages:
         align-items: center;
         justify-content: center;
       }
+    }
+  }
+}
+
+.banners-bg{
+  background-color: lighten(#bdb17f, 30);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media(md){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include media(lg){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.banners-list{
+  display: flex;
+  @include media(sm){
+    flex-direction: column;
+  }
+  @include media(md-lg){
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  li{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    @include media(md-lg){
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    img{
+      display: block;
     }
   }
 }

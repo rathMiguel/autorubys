@@ -57,3 +57,20 @@ register_taxonomy(
     'show_in_rest' => true
   )
 );
+
+// 不要なメニューの削除
+
+function remove_menus () {
+  global $menu;
+ 
+  remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'remove_menus', 99);
+ 
+   function remove_wp_nodes()
+{
+  global $wp_admin_bar;
+ 
+  $wp_admin_bar->remove_node( 'comments' );
+}
+add_action('admin_bar_menu', 'remove_wp_nodes', 99);

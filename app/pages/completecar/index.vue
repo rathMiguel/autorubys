@@ -37,7 +37,7 @@ div
                 .reason-content
                   h3.lead.lead-reason パーツ代、工賃も全てコミコミ。<br>だから、経済的
                   p ご自身で愛車をカスタマイズする場合、パーツを一つずつ揃えることになり、かえって費用が高額になってしまうケースも...。
-                  p コンプリートカーであれば、無駄なパーツを買わずに済みます。また、ローンを組む場合はパーツ代、工賃代も含んで組むことができるため、パーツごとに購入する場合よりもお得になります。
+                  p コンプリートカーであれば、無駄なパーツを買わずに済みます。また、<strong>オートローンによるお支払い（金利年2.3％～）</strong>も可能です。
             .reason-block-wrap
               .reason-block
                 .reason-photo: img(src="~/assets/images/completecar/complete_photo3.jpg" alt="")

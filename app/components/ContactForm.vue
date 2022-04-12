@@ -1,38 +1,37 @@
 <template lang="pug">
 .contact#form
-  .container
-    ValidationObserver(ref="obs" v-slot="ObserverProps")
-      .form-contain
-        validation-provider(name="名前" v-slot="{ errors }" rules="required")
-          dl.dl-form
-            dt お名前
-              span.label-required 必須
-            dd
-              input(type="text" name="お名前" placeholder="例）山田　太郎" v-model="formData.name").input-medium
-              .panel__error {{ errors[0] }}
-        validation-provider(name="メールアドレス" v-slot="{ errors }" rules="required|email")
-          dl.dl-form
-            dt メールアドレス
-              span.label-required 必須
-            dd
-              input(type="email" name="email" placeholder="例）info@autorubys.com" v-model="formData.email").input-medium
-              .panel__error {{ errors[0] }}
-        validation-provider(name="電話番号" v-slot="{ errors }" rules="required")
-          dl.dl-form
-            dt 電話番号
-              span.label-required 必須
-            dd
-              input(type="tel" name="電話番号" placeholder="例）0857-72-0727" v-model="formData.tel").input-medium
-              .panel__error {{ errors[0] }}
-        validation-provider(name="お問い合わせ内容" v-slot="{ errors }" rules="required")
-          dl.dl-form
-            dt お問い合わせ内容
-              span.label-required 必須
-            dd
-              textarea(name="お問い合わせ内容" v-model="formData.content").input-full
-              .panel__error {{ errors[0] }}
-        .form-footer
-          button(type="button" v-on:click="submit" :disabled="ObserverProps.invalid || !ObserverProps.validated").c-button.button-submit 送信する
+  ValidationObserver(ref="obs" v-slot="ObserverProps")
+    .form-contain
+      validation-provider(name="名前" v-slot="{ errors }" rules="required")
+        dl.dl-form
+          dt お名前
+            span.label-required 必須
+          dd
+            input(type="text" name="お名前" placeholder="例）山田　太郎" v-model="formData.name").input-medium
+            .panel__error {{ errors[0] }}
+      validation-provider(name="メールアドレス" v-slot="{ errors }" rules="required|email")
+        dl.dl-form
+          dt メールアドレス
+            span.label-required 必須
+          dd
+            input(type="email" name="email" placeholder="例）info@autorubys.com" v-model="formData.email").input-medium
+            .panel__error {{ errors[0] }}
+      validation-provider(name="電話番号" v-slot="{ errors }" rules="required")
+        dl.dl-form
+          dt 電話番号
+            span.label-required 必須
+          dd
+            input(type="tel" name="電話番号" placeholder="例）0857-72-0727" v-model="formData.tel").input-medium
+            .panel__error {{ errors[0] }}
+      validation-provider(name="お問い合わせ内容" v-slot="{ errors }" rules="required")
+        dl.dl-form
+          dt お問い合わせ内容
+            span.label-required 必須
+          dd
+            textarea(name="お問い合わせ内容" v-model="formData.content").input-full
+            .panel__error {{ errors[0] }}
+      .form-footer
+        button(type="button" v-on:click="submit" :disabled="ObserverProps.invalid || !ObserverProps.validated").c-button.button-submit 送信する
 </template>
 
 <script>

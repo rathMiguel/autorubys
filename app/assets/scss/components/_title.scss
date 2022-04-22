@@ -41,6 +41,14 @@
   &_third{
     font-size: 1.25em;
     margin-bottom: 10px;
+    &.has-line{
+      display: inline-block;
+      border-bottom: 2px solid #D70247;
+      padding-bottom: 3px;
+      padding-right: 5px;
+      padding-left: 5px;
+      margin-left: -5px;
+    }
   }
 
   &_info{

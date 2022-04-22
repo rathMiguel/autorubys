@@ -10,6 +10,12 @@ div
         p 発注、見積依頼書をご用意しました。<br>下記リンク先の案内に従って、発注、見積りのご依頼をいただきますよう、お願い申し上げます。
         .text-center
           p: nuxt-link(to="/news/post/181"): img(src="~/assets/images/contact/bnr_gyousya_fax.png" alt="")
+        .panel-plain
+          h3.c-title.c-title_third.has-line 海外配送をご希望の方へ
+          .text-left
+            p 商品の海外発送をご要望の方は下記までお願いします。
+              br
+              a(href="mailto:autorubys999&#x40;gmail.com" target="_blank") &#x61;&#x75;&#x74;&#x6f;&#x72;&#x75;&#x62;&#x79;&#x73;&#x39;&#x39;&#x39;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;
     section.section.page-section
       .container
         .section-header
@@ -94,6 +100,18 @@ small{
         color: inherit;
       } 
     }
+  }
+}
+
+.panel-plain{
+  padding: 15px;
+  background-color: #F6F6F6;
+  @include media(lg){
+    padding: 25px;
+  }
+
+  & *:last-child{
+    margin-bottom: 0;
   }
 }
 

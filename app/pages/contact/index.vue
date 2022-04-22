@@ -30,6 +30,7 @@ div
               span.tel-text: a(href="tel:0544265508").tel 0544-26-5508
             .touch-worktime: small 受付時間：10：00～19：00 水・木曜定休
             p E-MAIL：<a href="m&#97;i&#108;t&#111;:&#97;&#117;t&#111;&#114;u&#98;&#121;&#115;&#64;&#103;&#109;&#97;&#105;l&#46;&#99;o&#109;" target="_blank">&#97;&#117;t&#111;&#114;u&#98;&#121;&#115;&#64;&#103;&#109;&#97;&#105;l&#46;&#99;o&#109;</a>
+            p: nuxt-link(to='/branchstore/#contact') フォームからお問い合わせする
     section.section.page-section.bg-secondary#contact-form
       .container
         .section-header

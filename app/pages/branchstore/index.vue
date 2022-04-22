@@ -5,6 +5,7 @@
         li: nuxt-link(v-scroll-to="'#topics'" to) トピックス
         li: nuxt-link(v-scroll-to="'#features'" to) ブランチストアの特徴
         li: nuxt-link(v-scroll-to="'#access'" to) 交通アクセス
+        li: nuxt-link(v-scroll-to="'#contact'" to) お問い合わせ
         li: nuxt-link(to="/completecar/") コンプリートカー
         li: a(href="https://autorubys.base.shop/" target="_blank") オンラインストア
     .hero
@@ -111,6 +112,14 @@
                   li: a(href="https://www.instagram.com/autorubysbranchstore1805/" target="_blank"): img(src="~/assets/images/icons/38-instagram.svg" alt="Instagram" width=24)
                   li: a(href="https://www.youtube.com/channel/UCdXNgB5FDoNhbhDAythhRTA/videos" target="_blank"): img(src="~/assets/images/icons/youtube-brands.svg" alt="YouTube" width=24)
                   li: a(href="https://autorubys.base.shop/" target="_blank"): img(src="~/assets/images/branch/base2.svg" alt="公式オンラインショップ" width=33)
+    section#contact
+      .contact-bg
+        header.section-header
+          span.section-title Contact
+          h2.c-title.title-secondary お問い合わせ
+        .section-main
+          .container
+            BranchForm
     #banners
       .banners-bg
         .container
@@ -159,7 +168,7 @@ export default {
 
 .pagenav-list{
   position: absolute;
-  top: 40vh;
+  top: 25vh;
   left: 0;
   z-index: 1010;
   @include media(sm){
@@ -821,6 +830,20 @@ $galleryImages:
     img{
       display: block;
     }
+  }
+}
+
+//
+// contact
+//
+
+.contact-bg{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #EFEFEF;
+  @include media(sm){
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 

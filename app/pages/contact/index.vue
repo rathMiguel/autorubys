@@ -17,7 +17,7 @@ div
               br
               |（Overseas Customer Service）
               br
-              a(href="mailto:autorubys999&#x40;gmail.com" target="_blank") &#x61;&#x75;&#x74;&#x6f;&#x72;&#x75;&#x62;&#x79;&#x73;&#x39;&#x39;&#x39;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;
+              a(href="mailto:autorubys999@gmail.com" target="_blank") &#97;&#117;&#116;&#111;&#114;&#117;&#98;&#121;&#115;&#57;&#57;&#57;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
     section.section.page-section
       .container
         .section-header

@@ -15,6 +15,8 @@ div
           .text-left
             p 商品の海外発送をご要望の方は下記までお願いします。
               br
+              |（Overseas Customer Service）
+              br
               a(href="mailto:autorubys999&#x40;gmail.com" target="_blank") &#x61;&#x75;&#x74;&#x6f;&#x72;&#x75;&#x62;&#x79;&#x73;&#x39;&#x39;&#x39;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;
     section.section.page-section
       .container

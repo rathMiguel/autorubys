@@ -3,7 +3,7 @@
   ValidationObserver(ref="obs" v-slot="ObserverProps")
     .form-contain
       //- |{{ $data }}
-      dl.dl-form
+      dl.dl-form(v-if="formData.product")
         dt 対象の製品
         dd
           input(type="text" name="対象の製品" v-model="formData.product" disabled).input-medium

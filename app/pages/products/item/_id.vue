@@ -29,7 +29,7 @@ div
               p: small 価格は全て税抜です。
           .product-buttons
             ul.product-buttons__list
-              li.layout-half: nuxt-link(to="/contact/#contact-form").c-button.button.c-button_primary.button-email メールでのお問い合わせ
+              li.layout-half: nuxt-link(:to="`/contact/?item=${post.title.rendered}#contact-form`").c-button.button.c-button_primary.button-email メールでのお問い合わせ
               li.layout-half: a(href="tel:0857720727").c-button.button.c-button_primary.button-tel 電話でのお問い合わせ
               li(v-if="post.acf.link_yahoo"): a(:href="post.acf.link_yahoo" target="_blank").c-button.button.c-button_primary.button-shopping ショッピングで購入
 </template>

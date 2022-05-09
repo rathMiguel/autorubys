@@ -3,7 +3,7 @@
   ValidationObserver(ref="obs" v-slot="ObserverProps")
     .form-contain
       //- |{{ $data }}
-      dl.dl-form(v-if="formData.product")
+      dl.dl-form
         dt 対象の製品
         dd
           input(type="text" name="対象の製品" v-model="formData.product" disabled).input-medium
@@ -53,7 +53,9 @@ export default {
     }
   },
   mounted() {
-    return this.formData.product = this.$route.query.item
+    if(this.$route.query.item !== undefined){
+      return this.formData.product = this.$route.query.item
+    }
   },
   methods: {
     submit(){

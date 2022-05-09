@@ -4,9 +4,9 @@
     .form-contain
       //- |{{ $data }}
       dl.dl-form(v-if="formData.product")
-        dt お問い合わせの製品
+        dt 対象の製品
         dd
-          input(type="text" name="お問い合わせの製品" v-model="formData.product" disabled).input-medium
+          input(type="text" name="対象の製品" v-model="formData.product" disabled).input-medium
       validation-provider(name="名前" v-slot="{ errors }" rules="required")
         dl.dl-form
           dt お名前

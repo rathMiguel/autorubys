@@ -29,16 +29,16 @@ div
               span.tel-title tel.
               span.tel-text: a(href="tel:0857720727").tel 0857-72-0727
             .touch-worktime: small 受付時間：10：00～19：00 日曜定休
-            p E-MAIL：<a href="m&#97;i&#108;t&#111;:&#114;&#97;&#110;&#99;&#105;&#100;&#54;&#57;&#54;&#106;&#112;&#64;&#97;u&#116;o-r&#117;&#98;&#121;&#115;&#46;&#99;&#111;m" target="_blank">&#114;&#97;&#110;&#99;&#105;&#100;&#54;&#57;&#54;&#106;&#112;&#64;&#97;u&#116;o-r&#117;&#98;&#121;&#115;&#46;&#99;&#111;m</a>
-            p: nuxt-link(v-scroll-to="'#contact-form'" to) フォームからお問い合わせする
+            p E-MAIL：&#114;&#97;&#110;&#99;&#105;&#100;&#54;&#57;&#54;&#106;&#112;&#64;&#97;u&#116;o-r&#117;&#98;&#121;&#115;&#46;&#99;&#111;m
+            p: nuxt-link(v-scroll-to="'#contact-form'" to) フォームからお問い合わせ
           .touch-panel
             h3.c-title_third ブランチストアへのお問い合わせ
             dl.tel-dl.tel-dl--primary
               span.tel-title tel.
               span.tel-text: a(href="tel:0544265508").tel 0544-26-5508
             .touch-worktime: small 受付時間：10：00～19：00 水・木曜定休
-            p E-MAIL：<a href="m&#97;i&#108;t&#111;:&#97;&#117;t&#111;&#114;u&#98;&#121;&#115;&#64;&#103;&#109;&#97;&#105;l&#46;&#99;o&#109;" target="_blank">&#97;&#117;t&#111;&#114;u&#98;&#121;&#115;&#64;&#103;&#109;&#97;&#105;l&#46;&#99;o&#109;</a>
-            p: nuxt-link(to='/branchstore/#contact') フォームからお問い合わせする
+            p E-MAIL：&#97;&#117;t&#111;&#114;u&#98;&#121;&#115;&#64;&#103;&#109;&#97;&#105;l&#46;&#99;o&#109;
+            p: nuxt-link(to='/branchstore/#contact') フォームからお問い合わせ
     section.section.page-section.bg-secondary#contact-form
       .container
         .section-header

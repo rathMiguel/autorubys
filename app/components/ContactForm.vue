@@ -2,6 +2,11 @@
 .contact#form
   ValidationObserver(ref="obs" v-slot="ObserverProps")
     .form-contain
+      //- |{{ $data }}
+      dl.dl-form(v-if="formData.product")
+        dt 対象の製品
+        dd
+          input(type="text" name="対象の製品" v-model="formData.product" disabled).input-medium
       validation-provider(name="名前" v-slot="{ errors }" rules="required")
         dl.dl-form
           dt お名前
@@ -43,8 +48,12 @@ export default {
         name: "",
         email: "",
         content: "",
+        product: ""
       }
     }
+  },
+  mounted() {
+    return this.formData.product = this.$route.query.item
   },
   methods: {
     submit(){
@@ -202,6 +211,10 @@ input[type="number"],
 select,
 textarea{
   border-color: #AAA;
+}
+
+input[type="text"]:disabled{
+  background-color: #EEE;
 }
 
 </style>

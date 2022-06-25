@@ -100,3 +100,7 @@ function remove_wp_nodes(){
   $wp_admin_bar->remove_node( 'comments' );
 }
 add_action('admin_bar_menu', 'remove_wp_nodes', 99);
+
+// プラグインの更新通知を非表示
+// （※アップグレードするとContact Formのapi通信ができない）
+add_filter("pre_site_transient_update_plugins", "__return_null");

@@ -38,6 +38,10 @@ export default {
         3: {
           slug: "media",
           name: "メディア掲載"
+        },
+        8: {
+          slug: "important",
+          name: "重要なお知らせ"
         }
       },
       tab: 'all',

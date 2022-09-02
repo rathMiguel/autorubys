@@ -5,7 +5,8 @@
       v-for="(slide, index) in post.acf.slider"
       :key="index"
       )
-      a(:href="slide.link"): img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async")
+      a(:href="slide.link" v-if="slide.link"): img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async")
+      img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async" v-else)
   //- |{{ count }}
   //- |{{ post.acf.slider }}
 </template>

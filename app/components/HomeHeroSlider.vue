@@ -1,15 +1,25 @@
 <template lang="pug">
 #hero
   slick(ref="slick" :options="slickOptions")
-    .slide-block: nuxt-link(to="/completecar/"): img(src="~assets/images/home/slide_completecar.jpg" alt="" decoding="async")
-    .slide-block: nuxt-link(to="/branchstore/"): img(src="~assets/images/home/slide_4.jpg" alt="" decoding="async")
-    .slide-block: nuxt-link(to="/products/"): img(src="~assets/images/home/slide_2.jpg" alt="" decoding="async")
+    .slide-block(
+      v-for="(slide, index) in post.acf.slider"
+      :key="index"
+      )
+      a(:href="slide.link" v-if="slide.link"): img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async")
+      img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async" v-else)
+  //- |{{ count }}
+  //- |{{ post.acf.slider }}
 </template>
 
 <script>
 export default {
   data() {
     return {
+      post: {
+        acf: {
+          slider: []
+        }
+      },
       slickOptions: {
         dots: false,
         speed: 500,
@@ -19,8 +29,39 @@ export default {
         autoplay: true,
         infinite: true,
         controls: true
-      }
+      },
     }
+  },
+  beforeUpdate () {
+    if (this.$refs.slick) {
+      this.$refs.slick.destroy()
+    }
+  },
+  updated () {
+    if (this.$refs.slick && !this.$refs.slick.$el.classList.contains('slick-initialized')) {
+      this.$nextTick(() => {
+        this.$refs.slick.create(this.slickOptions)
+      })
+    }
+  },
+  activated () {
+    if (this.$refs.slick) {
+      this.$refs.slick.destroy()
+    }
+    if (this.$refs.slick && !this.$refs.slick.$el.classList.contains('slick-initialized')) {
+      this.$nextTick(() => {
+        this.$refs.slick.create(this.slickOptions)
+      })
+    }
+  },
+  mounted(){
+    this.$axios.get(`${process.env.WP_REST_API_BASE_URL}wp-json/wuxt/v1/front-page?_embed`)
+    .then((res) => {
+      this.post = res.data
+      return this.count = res.data.acf.slider.length
+    }).catch((e => {
+      error({ searchPosts: e.response.status, message: e.message })
+    }))
   }
 }
 </script>
@@ -28,7 +69,7 @@ export default {
 <style lang="scss" scoped>
 #hero{
   padding-bottom: 20px;
-  padding-top: 20px0;
+  padding-top: 20px;
   background-image: url('~assets/images/home/bg_linen.jpg');
   border-bottom: 1px solid #666;
   overflow: hidden;

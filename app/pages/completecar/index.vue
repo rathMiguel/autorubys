@@ -51,11 +51,12 @@ div
             h2.title.cta-title まずはお気軽に<br class="hide-lg">お問い合わせください
           .cta-content
             ul.cta-list
-              li: a(href="").tel.c-button.button.button-primary
-                i.icon.icon-phone: img(src="~/assets/images/icons/fa-phone.svg" alt="tel:0544265508")
-                span.cta-telmain
-                  span.cta-telnum 0544-26-5508
-                  span.cta-telwt 営業時間 10:00～19:00 水・木定休
+              li
+                a(href="tel:0857720727").tel.c-button.button.button-primary
+                  i.icon.icon-phone: img(src="~/assets/images/icons/fa-phone.svg" alt="")
+                  span.cta-telmain
+                    span.cta-telnum 0857-72-0727
+                    span.cta-telwt 受付時間 9:00～18:00 <br>日曜日、第1水曜、第3水曜定休
               li: nuxt-link(to="/contact/").c-button.button.button-seconary メールでお問い合わせ
 </template>
 
@@ -388,8 +389,11 @@ $color-secondary: #BDB17F;
         }
       }
       .cta-telwt{
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
+        line-height: 1.3;
+        margin-top: 8px;
+        display: inline-block;
         @include media(sm){
           font-size: 11px;
         }

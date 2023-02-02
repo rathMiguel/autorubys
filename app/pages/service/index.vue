@@ -11,21 +11,21 @@ div
           .subsection-main.subsection-main_flex
             .subsection-photo: img(src="~/assets/images/service/service_photo1.jpg")
             .subsection-content
-              p 各種メーカーの新車販売はもちろん、お客様のお探しの中古車もお探し致します<br>自動車関連用品の販売、取付も行っています<br>オートローン、カーリースもお任せください
+              p 各種メーカーの新車販売はもちろん、お客様のご希望の中古車もお探し致します。またカスタム車輌のコンプリートカー製作も対応しております。
         section.subsection
           .subsection-header
             h2.c-title.c-title_secondary 車検、修理、メンテナンス
           .subsection-main.subsection-main_flex
             .subsection-photo: img(src="~/assets/images/service/service_photo2.jpg")
             .subsection-content
-              p 自動車整備一般<br>自動車車検業務<br>中国運輸局認証工場
+              p カスタムパーツの塗装、取付、FRP補修<br>全塗装を含むカスタムカーペイント<br>ラプターライナーによるチッピング系コーティング塗装
         section.subsection
           .subsection-header
             h2.c-title.c-title_secondary 事故車修理及び鈑金塗装
           .subsection-main.subsection-main_flex
             .subsection-photo: img(src="~/assets/images/service/service_photo3.jpg")
             .subsection-content
-              p 事故などによる鈑金塗装修理<br>パーツ等の塗装施工
+              p 万が一の事故による自動車車体の鈑金塗装修理に対応致します。<br>パーツ等の塗装施工を致します。
 </template>
 
 <style lang="scss" scoped>

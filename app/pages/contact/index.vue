@@ -24,18 +24,20 @@ div
           h2.c-title_info お電話からのお問い合わせ
         .touch-raw
           .touch-panel
-            h3.c-title_third 本社へのお問い合わせ
+            h3.c-title_third.title-touch 本社（鳥取店）へのお問い合わせ
             dl.tel-dl.tel-dl--primary
               span.tel-title tel.
               span.tel-text: a(href="tel:0857720727").tel 0857-72-0727
+            address.touch-address 〒681-0073 鳥取県岩美郡岩美町大字大谷1485-1
             .touch-worktime: small 受付時間：9：00～18：00 <br>日曜日、第一水曜日、第三水曜日定休
             p E-MAIL：&#114;&#97;&#110;&#99;&#105;&#100;&#54;&#57;&#54;&#106;&#112;&#64;&#97;u&#116;o-r&#117;&#98;&#121;&#115;&#46;&#99;&#111;m
             p: nuxt-link(v-scroll-to="'#contact-form'" to) フォームからお問い合わせ
           .touch-panel
-            h3.c-title_third ブランチストアへのお問い合わせ
+            h3.c-title_third.title-touch ブランチストア（静岡店）へのお問い合わせ
             dl.tel-dl.tel-dl--primary
               span.tel-title tel.
               span.tel-text: a(href="tel:0544265508").tel 0544-26-5508
+            address.touch-address 静岡県富士宮市小泉1805-1
             .touch-worktime: small 受付時間：10：00～19：00 水・木曜定休
             p E-MAIL：&#97;&#117;t&#111;&#114;u&#98;&#121;&#115;&#64;&#103;&#109;&#97;&#105;l&#46;&#99;o&#109;
             p: nuxt-link(to='/branchstore/#contact') フォームからお問い合わせ
@@ -115,6 +117,17 @@ small{
   & *:last-child{
     margin-bottom: 0;
   }
+}
+
+.title-touch{
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.touch-address{
+  font-size: 0.9em;
+  display: block;
+  margin-top: 0.5em;
 }
 
 </style>

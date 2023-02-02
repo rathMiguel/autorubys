@@ -31,7 +31,8 @@ div
             ul.product-buttons__list
               li.layout-half: nuxt-link(:to="`/contact/?item=${post.title.rendered}#contact-form`").c-button.button.c-button_primary.button-email メールでのお問い合わせ
               li.layout-half: a(href="tel:0857720727").c-button.button.c-button_primary.button-tel 電話でのお問い合わせ
-              li(v-if="post.acf.link_yahoo"): a(:href="post.acf.link_yahoo" target="_blank").c-button.button.c-button_primary.button-shopping ショッピングで購入
+              li(v-if="post.acf.link_yahoo"): a(:href="post.acf.link_yahoo" target="_blank").c-button.button.c-button_primary.button-shopping.button-shopping--yahoo ショッピングで購入
+              li(v-if="post.acf.link_rakuten"): a(:href="post.acf.link_rakuten" target="_blank").c-button.button.c-button_primary.button-shopping.button-shopping--rakuten で購入
 </template>
 
 
@@ -230,15 +231,28 @@ div
     &:before{
       content: "";
       display: inline-block;
-      background-image: url('~assets/images/icons/logo_yahoo.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
-      height: 35px;
-      width: 100px;
       margin-right: 5px;
       position: relative;
       top: -1px;
+    }
+    
+    &--yahoo{
+      &:before{
+        height: 35px;
+        width: 100px;
+        background-image: url('~assets/images/icons/logo_yahoo.svg');
+      }
+    }
+    &--rakuten{
+      background-color: #BF0000;
+      &:before{
+        height: 35px;
+        width: 100px;
+        background-image: url('~assets/images/icons/logo_rakuten.svg');
+      }
     }
   }
 }

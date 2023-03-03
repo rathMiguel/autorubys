@@ -1,5 +1,5 @@
 <template lang="pug">
-div(v-if="posts.length")
+div(v-if="posts.length || postsSticky.length")
   #news
     .container
       .news-wrap
@@ -9,7 +9,7 @@ div(v-if="posts.length")
             dl.news-dl(v-if="index <= 0")
               dt {{ $moment(post.date).format("YYYY.MM.DD") }}
               dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
-          dl.news-dl(v-for="post in posts")
+          dl.news-dl(v-if="posts.length" v-for="post in posts")
             dt {{ $moment(post.date).format("YYYY.MM.DD") }}
             dd: nuxt-link(:to="'/news/post/' + post.id") {{ post.title.rendered }}
 </template>

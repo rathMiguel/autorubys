@@ -4,7 +4,7 @@ export default {
   srcDir: 'app/',
   target: 'static',
   /*
-  ** Headers of the page
+  ** Headers o fthe page
   */
   head: {
     title: '',
@@ -53,9 +53,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-154422922-1'
-    }]
+    "@nuxtjs/google-gtag"
   ],
   /*
   ** Nuxt.js modules
@@ -88,6 +86,11 @@ export default {
     display: "standalone",
     theme_color: '#ffffff',
     background_color: '#ffffff'
+  },
+
+  "google-gtag": {
+    id: "G-TD6B8Y44BQ",
+    debug: false
   },
 
   env: {

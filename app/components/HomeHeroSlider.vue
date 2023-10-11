@@ -2,11 +2,9 @@
 #hero
   slick(ref="slick" :options="slickOptions")
     .slide-block(
-      v-for="(slide, index) in post.acf.slider"
-      :key="index"
-      )
-      a(:href="slide.link" v-if="slide.link"): img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async")
-      img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async" v-else)
+      v-for="(slide, index) in post.acf.slider" :key="index")
+        a(:href="slide.link" v-if="slide.link"): img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async" width="1000" height="500")
+        img(:src="slide.photo.sizes.large" :alt="slide.photo.alt" decoding="async" v-else width="1000" height="500")
   //- |{{ count }}
   //- |{{ post.acf.slider }}
 </template>

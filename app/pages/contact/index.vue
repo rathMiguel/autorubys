@@ -28,7 +28,7 @@ div
             dl.tel-dl.tel-dl--primary
               span.tel-title tel.
               span.tel-text: a(href="tel:0857720727").tel 0857-72-0727
-            address.touch-address 〒681-0073 鳥取県岩美郡岩美町大字大谷1485-1
+            address.touch-address 〒681-0073 鳥取県岩美郡岩美町大谷1567-1
             .touch-worktime: small 受付時間：9：00～18：00 <br>日曜日、第一水曜日、第三水曜日定休
             p E-MAIL：&#114;&#97;&#110;&#99;&#105;&#100;&#54;&#57;&#54;&#106;&#112;&#64;&#97;u&#116;o-r&#117;&#98;&#121;&#115;&#46;&#99;&#111;m
             p: nuxt-link(v-scroll-to="'#contact-form'" to) フォームからお問い合わせ

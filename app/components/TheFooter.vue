@@ -16,7 +16,7 @@
             .footer-logo: nuxt-link(to="/"): img(src="~/assets/images/common/logo_white.svg" alt="株式会社　オートルビーズ" width=270)
             h3.c-title: small 株式会社オートルビーズ
             address
-              span.address-text 〒681-0073 鳥取県岩美郡岩美町大字大谷1485-1
+              span.address-text 〒681-0073 鳥取県岩美郡岩美町大谷1567-1
           .footer-nav
             .container.footer-container
               ul.footer-nav_list
